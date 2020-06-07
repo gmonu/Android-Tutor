@@ -2,5 +2,7 @@
     <string name="app_name">Android Tutor</string>
     <string name="todo">TODO</string>
     <string name="next">Next</string>
+    <string name="back">Back</string>
+
     <string name="get_started">Get Started</string>
 </resources>

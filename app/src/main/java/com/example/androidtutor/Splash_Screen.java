@@ -10,15 +10,15 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class Splash_Screen extends AppCompatActivity {
-    ImageView iconImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash__screen);
-        iconImage = (ImageView)findViewById(R.id.splash);
+
 
         Animation myanim = AnimationUtils.loadAnimation(this,R.anim.mytransition);
-        iconImage.setAnimation(myanim);
+
 
         final Intent i = new Intent(Splash_Screen.this,Slider1.class);
         Thread timer = new Thread(){

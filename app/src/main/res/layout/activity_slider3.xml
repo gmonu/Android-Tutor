@@ -4,16 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/s3"
     tools:context=".Slider3">
 
     <Button
-        android:id="@+id/s3"
-        android:layout_width="305dp"
-        android:layout_height="61dp"
-        android:text="@string/get_started"
+        android:id="@+id/n3"
+        android:layout_width="146dp"
+        android:layout_height="42dp"
+        android:background="@color/slider3button"
+        android:fontFamily="@font/a"
+        android:text="@string/next"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:shadowColor="@color/Aquamarine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929" />
+        app:layout_constraintVertical_bias="0.946" />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="146dp"
+        android:layout_height="42dp"
+        android:text="@string/back"
+        android:background="@color/slider3button"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/a"
+        android:shadowColor="@color/Aquamarine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.946" />
 </androidx.constraintlayout.widget.ConstraintLayout>

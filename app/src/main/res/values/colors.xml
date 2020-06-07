@@ -60,4 +60,7 @@
     <color name="CadetBlue">#5F9EA0</color>
     <color name="DarkOliveGreen">#556B2F</color>
     <color name="Indigo">#4B0082</color>
+    <color name="slider1button">#4285F4</color>
+    <color name="slider2button">#DB4437</color>
+    <color name="slider3button">#F4B400</color>
 </resources>

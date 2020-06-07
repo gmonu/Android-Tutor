@@ -20,7 +20,7 @@ public class Splash_Screen extends AppCompatActivity {
         Animation myanim = AnimationUtils.loadAnimation(this,R.anim.mytransition);
         iconImage.setAnimation(myanim);
 
-        final Intent i = new Intent(Splash_Screen.this,MainActivity.class);
+        final Intent i = new Intent(Splash_Screen.this,Slider1.class);
         Thread timer = new Thread(){
             public void run()
             {

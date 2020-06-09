@@ -20,12 +20,12 @@ public class Splash_Screen extends AppCompatActivity {
         Animation myanim = AnimationUtils.loadAnimation(this,R.anim.mytransition);
 
 
-        final Intent i = new Intent(Splash_Screen.this,Slider1.class);
+        final Intent i = new Intent(Splash_Screen.this,SliderScreen.class);
         Thread timer = new Thread(){
             public void run()
             {
                 try{
-                    sleep(5000);//5 secs
+                    sleep(2000);//2 secs
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }

@@ -66,6 +66,31 @@
     <color name="slider1button">#4285F4</color>
     <color name="slider2button">#DB4437</color>
     <color name="slider3button">#F4B400</color>
+  
+    <color name="black">#000000</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#4B0082</color>
+
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#6495ED</color>
+
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen1</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+    </array>
+
     <color name="newBlue">#138FF7</color>
     <color name="startColor">#86bbd8</color>
     <color name="endColor">#336699</color>
@@ -86,4 +111,5 @@
     <color name="bottomNavItem">#ffffff</color>
     <color name="bottomNavInactive">#80ffffff</color>
     <color name="blackToWhite">#000</color>
+
 </resources>

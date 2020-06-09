@@ -60,9 +60,13 @@
     <color name="CadetBlue">#5F9EA0</color>
     <color name="DarkOliveGreen">#556B2F</color>
     <color name="Indigo">#4B0082</color>
+
+
+<!--    CollegeConnect Resource-->
     <color name="slider1button">#4285F4</color>
     <color name="slider2button">#DB4437</color>
     <color name="slider3button">#F4B400</color>
+  
     <color name="black">#000000</color>
 
     <!-- dots inactive colors -->
@@ -86,4 +90,26 @@
         <item>@color/dot_dark_screen1</item>
         <item>@color/dot_dark_screen1</item>
     </array>
+
+    <color name="newBlue">#138FF7</color>
+    <color name="startColor">#86bbd8</color>
+    <color name="endColor">#336699</color>
+    <color name="colorSurface">#F3F9FE</color>
+    <color name="colorwhite">#ffffff</color>
+    <color name="shortTag">#FBFF61</color>
+    <color name="longTag">#FF6A6A</color>
+    <color name="etuTag">#6FFF6F</color>
+    <color name="ttpTag">#6AFFEC</color>
+    <color name="textcolor">#000</color>
+    <color name="fragmentbackground">#ffffff</color>
+    <color name="cardbackground">#ffffff</color>
+    <color name="arctext">#138FF7</color>
+    <color name="cardtext">#000</color>
+    <color name="statusBar">#138FF7</color>
+    <color name="bottomBoundary">#138FF7</color>
+    <color name="bottomNav">#138FF7</color>
+    <color name="bottomNavItem">#ffffff</color>
+    <color name="bottomNavInactive">#80ffffff</color>
+    <color name="blackToWhite">#000</color>
+
 </resources>

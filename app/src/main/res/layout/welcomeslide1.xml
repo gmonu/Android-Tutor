@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="Learn"
         android:textAllCaps="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="120dp"
         android:letterSpacing=".4"
         android:textColor="@color/CornflowerBlue"
         android:textAlignment="center"
@@ -29,8 +29,10 @@
         />
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/s1"
-        android:layout_margin="20dp"/>
+        android:layout_height="wrap_content"
+        android:src="@drawable/slider1image"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="-50dp"
+        />
 
 </LinearLayout>

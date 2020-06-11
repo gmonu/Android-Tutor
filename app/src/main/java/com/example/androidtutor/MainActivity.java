@@ -16,12 +16,19 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private Button logout;
     private Button mapbutton;
+    Button tut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        tut = (Button)findViewById(R.id.button1);
+        tut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Tutorial.class));
+            }
+        });
         firebaseAuth = FirebaseAuth.getInstance();
         logout = (Button)findViewById(R.id.btnlogout);
         logout.setOnClickListener(new View.OnClickListener() {

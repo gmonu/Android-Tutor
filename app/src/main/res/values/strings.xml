@@ -8,4 +8,9 @@
     <string name="screen1text">Learn all the things that are\n essential to build a cool\n android application</string>
     <string name="screen2text">Start Building your own app today,\n take help from this app.\nSee the code for particular\n feature of application</string>
     <string name="screen3text">Share your own app with your\n friends and start helping the\n society in many different\n sectors </string>
+    <string name="by_think_and_build">By Think And Build</string>
+    <string name="share">share</string>
+    <string name="todo1">TODO</string>
+
+
 </resources>

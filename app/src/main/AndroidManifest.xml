@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AndroidWidgets.Button"></activity>
+        <activity android:name=".AndroidWidgets.EditText" />
         <activity android:name=".AndroidWidgets.TextViewFragment" />
         <activity android:name=".TextView.TextViewExample" />
         <activity android:name=".Tutorial" />

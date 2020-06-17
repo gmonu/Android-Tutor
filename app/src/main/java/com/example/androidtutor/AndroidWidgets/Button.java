@@ -5,35 +5,35 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.widget.Button;
 
-import com.example.androidtutor.Fragment.Tab2;
-import com.example.androidtutor.Fragment.Tab3;
+import com.example.androidtutor.Button.ButtonExample;
+import com.example.androidtutor.Button.ButtonJava;
+import com.example.androidtutor.Button.ButtonXML;
+import com.example.androidtutor.EditText.EditTextExample;
+import com.example.androidtutor.EditText.EditTextJava;
+import com.example.androidtutor.EditText.EditTextXML;
 import com.example.androidtutor.PagerAdapter;
 import com.example.androidtutor.R;
-import com.example.androidtutor.TextView.Java;
-import com.example.androidtutor.TextView.TextViewExample;
-import com.example.androidtutor.TextView.XML;
 import com.google.android.material.tabs.TabLayout;
 
-public class TextViewFragment extends AppCompatActivity {
-
+public class Button extends AppCompatActivity {
 
     private void setupViewpager(ViewPager viewpager){
         PagerAdapter adapter=new PagerAdapter(getSupportFragmentManager(),1);
-        adapter.addFragment(new TextViewExample(),"Example");
-        adapter.addFragment(new Java(),"Java Code");
-        adapter.addFragment(new XML(),"XML Code");
+        adapter.addFragment(new ButtonExample(),"Example");
+        adapter.addFragment(new ButtonJava(),"Java Code");
+        adapter.addFragment(new ButtonXML(),"XML Code");
         viewpager.setAdapter(adapter);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_text_view_fragment);
-        TabLayout tablayout= findViewById(R.id.tabs1);
-        Toolbar toolbar=findViewById(R.id.toolbar1);
+        setContentView(R.layout.activity_button);
+        TabLayout tablayout= findViewById(R.id.tabs3);
+        Toolbar toolbar=findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar);
-        ViewPager viewpager=findViewById(R.id.viewpager1);
+        ViewPager viewpager=findViewById(R.id.viewpager3);
         setupViewpager(viewpager);
         tablayout.setupWithViewPager(viewpager);
     }

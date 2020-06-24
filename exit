@@ -1,0 +1,163 @@
+[33mcommit 7ef4d96a6860efc81807d26d8ab17057356b3b2f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: = <=>
+Date:   Wed Jun 17 18:44:41 2020 +0530
+
+    Added some buttons in Tutorials
+
+[33mcommit 2288c089fd7ea11c14a438af98459209fe549f9c[m
+Author: = <=>
+Date:   Wed Jun 17 17:50:36 2020 +0530
+
+    TextViewButton Partially Done
+
+[33mcommit c162de211e73ac037278feadbe1ea88c75300e90[m
+Merge: b5902ce 98f3a53
+Author: Monu Gupta <42869855+gmonu@users.noreply.github.com>
+Date:   Mon Jun 15 09:30:40 2020 +0530
+
+    Merge pull request #4 from Karandeep98/master
+    
+    ViewPager added at Home Screen
+
+[33mcommit 98f3a537c03f68009527c20061dece8149c7dc21[m
+Author: Karandeep Singh <karandeep041998@gmail.com>
+Date:   Mon Jun 15 02:36:54 2020 +0530
+
+    ViewPager added at Home Screen
+
+[33mcommit b5902ce9930e575e5c4c86229121e8d63978c2bf[m
+Author: = <=>
+Date:   Fri Jun 12 01:55:55 2020 +0530
+
+    Tutorial activity added
+
+[33mcommit 00f5dec79808541fd6f61c73b6e3b1c6d3f1886e[m
+Merge: 9d9d9e0 99c0fa1
+Author: Monu Gupta <42869855+gmonu@users.noreply.github.com>
+Date:   Thu Jun 11 23:55:21 2020 +0530
+
+    Merge pull request #3 from Karandeep98/master
+    
+    Login using Google implemented
+
+[33mcommit 9d9d9e028331c2d5b1db852286909665bd702fa9[m
+Author: = <=>
+Date:   Thu Jun 11 23:54:19 2020 +0530
+
+    some changes
+
+[33mcommit 99c0fa18581fd4d30615f89e51fc20b32711a6a9[m
+Author: Karandeep Singh <karandeep041998@gmail.com>
+Date:   Thu Jun 11 23:52:05 2020 +0530
+
+    Login using Google implemented
+
+[33mcommit 1873e505201a7964258f782e7e0159adc5c8768a[m
+Merge: 0b587dd aabdab5
+Author: Karandeep Singh <karandeep041998@gmail.com>
+Date:   Thu Jun 11 21:39:26 2020 +0530
+
+    Merge remote-tracking branch 'remotes/upstream/master'
+
+[33mcommit 0b587ddf522970863632b08e4c684a97089d4438[m
+Author: Karandeep Singh <karandeep041998@gmail.com>
+Date:   Thu Jun 11 21:35:53 2020 +0530
+
+    Google Login UI created
+
+[33mcommit aabdab51b94d925352e5ae832fb9dc4871304f30[m
+Author: = <=>
+Date:   Wed Jun 10 02:57:23 2020 +0530
+
+    textfield Deleted
+
+[33mcommit 3481039dd9616301dec1ded2a117b5bf54ea7c1f[m
+Author: = <=>
+Date:   Wed Jun 10 02:46:10 2020 +0530
+
+    Few Changes
+
+[33mcommit 3dc721f4fe4ce168ad0489c1d088d40224c2263d[m
+Merge: ce7795e a31de55
+Author: Monu Gupta <42869855+gmonu@users.noreply.github.com>
+Date:   Wed Jun 10 02:13:21 2020 +0530
+
+    Merge pull request #2 from Karandeep98/master
+    
+    slider screen UI improved
+
+[33mcommit a31de55824ec7edfddcd800e92a12e78ef0fa953[m
+Author: Karandeep Singh <karandeep041998@gmail.com>
+Date:   Wed Jun 10 01:45:49 2020 +0530
+
+    slider screen UI improved
+
+[33mcommit ce7795ed1b47fd5a99eaf7221eaddafaa82afb65[m
+Author: = <=>
+Date:   Wed Jun 10 01:07:19 2020 +0530
+
+    Splash screen modified
+
+[33mcommit 031116dd57754b0c5109ada8d26da3702031e5c2[m
+Merge: 31232f3 301be6f
+Author: Monu Gupta <42869855+gmonu@users.noreply.github.com>
+Date:   Wed Jun 10 00:46:47 2020 +0530
+
+    Merge pull request #1 from Karandeep98/master
+    
+    Slider Screen added
+
+[33mcommit 301be6f0994e0dd313185d98f765ecffe55e9749[m
+Merge: f330868 31232f3
+Author: Monu Gupta <42869855+gmonu@users.noreply.github.com>
+Date:   Wed Jun 10 00:46:35 2020 +0530
+
+    Merge branch 'master' into master
+
+[33mcommit 31232f3acb5cf428d934e9f8184772c14fce2a8a[m
+Author: = <=>
+Date:   Wed Jun 10 00:39:01 2020 +0530
+
+    Sliders Images
+
+[33mcommit f33086871efeb44b9613f8f4b63556d5a8b11575[m
+Author: Karandeep Singh <karandeep041998@gmail.com>
+Date:   Wed Jun 10 00:31:08 2020 +0530
+
+    unused files deleted
+
+[33mcommit 19f17179db7bd9ec71e24fb2f683739454df7204[m
+Author: Karandeep Singh <karandeep041998@gmail.com>
+Date:   Wed Jun 10 00:30:06 2020 +0530
+
+    Slider Screen Added
+
+[33mcommit 53c9961418a244d5d892f0a848903b42ad08a552[m
+Author: Monu Gupta <42869855+gmonu@users.noreply.github.com>
+Date:   Mon Jun 8 19:47:46 2020 +0530
+
+    Create README.md
+
+[33mcommit 560d0f47f0cd1a373ff11e28b3e0ef18995655f5[m
+Author: = <=>
+Date:   Sun Jun 7 23:43:58 2020 +0530
+
+    Sliders added
+
+[33mcommit 5ab8e5b634547467c3a163180ead06ff1ab97ec1[m
+Author: = <=>
+Date:   Sun Jun 7 16:26:17 2020 +0530
+
+    Authentication is done
+
+[33mcommit bfca8f037e47578a57e4d3abcb8e62ca3f84a1cf[m
+Author: = <=>
+Date:   Sun Jun 7 14:10:59 2020 +0530
+
+    first commit (Splash Screen added)
+
+[33mcommit 1e919bdfdec05182c0468a6a5058f25fa59471ea[m
+Author: Monu Gupta <42869855+gmonu@users.noreply.github.com>
+Date:   Sun Jun 7 14:08:18 2020 +0530
+
+    Initial commit

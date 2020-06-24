@@ -17,7 +17,31 @@
 
 <!--    Android Widgets Strings-->
     <string name="textviewxml">
-        
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;androidx.constraintlayout.widget.ConstraintLayout\n
+
+        \txmlns:android="http://schemas.android.com/apk/res/android"\n
+        \t    xmlns:app="http://schemas.android.com/apk/res-auto"\n
+\t            xmlns:tools="http://schemas.android.com/tools"\n
+  \t          android:layout_width="match_parent"\n
+    \t        android:layout_height="match_parent"\n
+      \t      tools:context=".TextView.TextViewExample">\n
+
+    &lt;TextView\n
+       \t android:id="@+id/textView21"\n
+        \tandroid:layout_width="wrap_content"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:text="This is a TextView"\n
+        \tandroid:textSize="28sp"\n
+        \tapp:layout_constraintBottom_toBottomOf="parent"\n
+        \tapp:layout_constraintEnd_toEndOf="parent"\n
+        \tapp:layout_constraintStart_toStartOf="parent"\n
+        \tandroid:textAlignment="center"\n
+        \tandroid:textColor="@color/black"\n
+        \tapp:layout_constraintTop_toTopOf="parent"\n
+        \tandroid:gravity="center_horizontal" />\n
+&lt;/androidx.constraintlayout.widget.ConstraintLayout>
+
     </string>
 
 

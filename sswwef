@@ -1,0 +1,850 @@
+[33mcommit 7ef4d96a6860efc81807d26d8ab17057356b3b2f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: = <=>
+Date:   Wed Jun 17 18:44:41 2020 +0530
+
+    Added some buttons in Tutorials
+
+[1mdiff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml[m
+[1mindex b2a4237..3942d18 100644[m
+[1m--- a/app/src/main/AndroidManifest.xml[m
+[1m+++ b/app/src/main/AndroidManifest.xml[m
+[36m@@ -11,6 +11,8 @@[m
+         android:roundIcon="@mipmap/ic_launcher_round"[m
+         android:supportsRtl="true"[m
+         android:theme="@style/AppTheme">[m
+[32m+[m[32m        <activity android:name=".AndroidWidgets.Button"></activity>[m
+[32m+[m[32m        <activity android:name=".AndroidWidgets.EditText" />[m
+         <activity android:name=".AndroidWidgets.TextViewFragment" />[m
+         <activity android:name=".TextView.TextViewExample" />[m
+         <activity android:name=".Tutorial" />[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/AndroidWidgets/Button.java b/app/src/main/java/com/example/androidtutor/AndroidWidgets/Button.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dda93ff[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/AndroidWidgets/Button.java[m
+[36m@@ -0,0 +1,40 @@[m
+[32m+[m[32mpackage com.example.androidtutor.AndroidWidgets;[m
+[32m+[m
+[32m+[m[32mimport androidx.appcompat.app.AppCompatActivity;[m
+[32m+[m[32mimport androidx.appcompat.widget.Toolbar;[m
+[32m+[m[32mimport androidx.viewpager.widget.ViewPager;[m
+[32m+[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m
+[32m+[m[32mimport com.example.androidtutor.Button.ButtonExample;[m
+[32m+[m[32mimport com.example.androidtutor.Button.ButtonJava;[m
+[32m+[m[32mimport com.example.androidtutor.Button.ButtonXML;[m
+[32m+[m[32mimport com.example.androidtutor.EditText.EditTextExample;[m
+[32m+[m[32mimport com.example.androidtutor.EditText.EditTextJava;[m
+[32m+[m[32mimport com.example.androidtutor.EditText.EditTextXML;[m
+[32m+[m[32mimport com.example.androidtutor.PagerAdapter;[m
+[32m+[m[32mimport com.example.androidtutor.R;[m
+[32m+[m[32mimport com.google.android.material.tabs.TabLayout;[m
+[32m+[m
+[32m+[m[32mpublic class Button extends AppCompatActivity {[m
+[32m+[m
+[32m+[m[32m    private void setupViewpager(ViewPager viewpager){[m
+[32m+[m[32m        PagerAdapter adapter=new PagerAdapter(getSupportFragmentManager(),1);[m
+[32m+[m[32m        adapter.addFragment(new ButtonExample(),"Example");[m
+[32m+[m[32m        adapter.addFragment(new ButtonJava(),"Java Code");[m
+[32m+[m[32m        adapter.addFragment(new ButtonXML(),"XML Code");[m
+[32m+[m[32m        viewpager.setAdapter(adapter);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    protected void onCreate(Bundle savedInstanceState) {[m
+[32m+[m[32m        super.onCreate(savedInstanceState);[m
+[32m+[m[32m        setContentView(R.layout.activity_button);[m
+[32m+[m[32m        TabLayout tablayout= findViewById(R.id.tabs3);[m
+[32m+[m[32m        Toolbar toolbar=findViewById(R.id.toolbar3);[m
+[32m+[m[32m        setSupportActionBar(toolbar);[m
+[32m+[m[32m        ViewPager viewpager=findViewById(R.id.viewpager3);[m
+[32m+[m[32m        setupViewpager(viewpager);[m
+[32m+[m[32m        tablayout.setupWithViewPager(viewpager);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/AndroidWidgets/EditText.java b/app/src/main/java/com/example/androidtutor/AndroidWidgets/EditText.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..04ff5a7[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/AndroidWidgets/EditText.java[m
+[36m@@ -0,0 +1,41 @@[m
+[32m+[m[32mpackage com.example.androidtutor.AndroidWidgets;[m
+[32m+[m
+[32m+[m[32mimport androidx.appcompat.app.AppCompatActivity;[m
+[32m+[m[32mimport androidx.appcompat.widget.Toolbar;[m
+[32m+[m[32mimport androidx.viewpager.widget.ViewPager;[m
+[32m+[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m
+[32m+[m[32mimport com.example.androidtutor.EditText.EditTextExample;[m
+[32m+[m[32mimport com.example.androidtutor.EditText.EditTextJava;[m
+[32m+[m[32mimport com.example.androidtutor.EditText.EditTextXML;[m
+[32m+[m[32mimport com.example.androidtutor.PagerAdapter;[m
+[32m+[m[32mimport com.example.androidtutor.R;[m
+[32m+[m[32mimport com.example.androidtutor.TextView.Java;[m
+[32m+[m[32mimport com.example.androidtutor.TextView.TextViewExample;[m
+[32m+[m[32mimport com.example.androidtutor.TextView.XML;[m
+[32m+[m[32mimport com.google.android.material.tabs.TabLayout;[m
+[32m+[m
+[32m+[m[32mpublic class EditText extends AppCompatActivity {[m
+[32m+[m
+[32m+[m[32m    private void setupViewpager(ViewPager viewpager){[m
+[32m+[m[32m        PagerAdapter adapter=new PagerAdapter(getSupportFragmentManager(),1);[m
+[32m+[m[32m        adapter.addFragment(new EditTextExample(),"Example");[m
+[32m+[m[32m        adapter.addFragment(new EditTextJava(),"Java Code");[m
+[32m+[m[32m        adapter.addFragment(new EditTextXML(),"XML Code");[m
+[32m+[m[32m        viewpager.setAdapter(adapter);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    protected void onCreate(Bundle savedInstanceState) {[m
+[32m+[m[32m        super.onCreate(savedInstanceState);[m
+[32m+[m[32m        setContentView(R.layout.activity_edit_text);[m
+[32m+[m[32m        TabLayout tablayout= findViewById(R.id.tabs2);[m
+[32m+[m[32m        Toolbar toolbar=findViewById(R.id.toolbar2);[m
+[32m+[m[32m        setSupportActionBar(toolbar);[m
+[32m+[m[32m        ViewPager viewpager=findViewById(R.id.viewpager2);[m
+[32m+[m[32m        setupViewpager(viewpager);[m
+[32m+[m[32m        tablayout.setupWithViewPager(viewpager);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/AndroidWidgets/TextViewFragment.java b/app/src/main/java/com/example/androidtutor/AndroidWidgets/TextViewFragment.java[m
+[1mindex 1a900d9..0479002 100644[m
+[1m--- a/app/src/main/java/com/example/androidtutor/AndroidWidgets/TextViewFragment.java[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/AndroidWidgets/TextViewFragment.java[m
+[36m@@ -18,8 +18,6 @@[m [mimport com.google.android.material.tabs.TabLayout;[m
+ [m
+ public class TextViewFragment extends AppCompatActivity {[m
+ [m
+[31m-    private Button mapbutton;[m
+[31m-    Button tut;[m
+ [m
+     private void setupViewpager(ViewPager viewpager){[m
+         PagerAdapter adapter=new PagerAdapter(getSupportFragmentManager(),1);[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/Button/ButtonExample.java b/app/src/main/java/com/example/androidtutor/Button/ButtonExample.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3c27004[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/Button/ButtonExample.java[m
+[36m@@ -0,0 +1,33 @@[m
+[32m+[m[32mpackage com.example.androidtutor.Button;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m[32mimport android.view.LayoutInflater;[m
+[32m+[m[32mimport android.view.View;[m
+[32m+[m[32mimport android.view.ViewGroup;[m
+[32m+[m
+[32m+[m[32mimport androidx.fragment.app.Fragment;[m
+[32m+[m
+[32m+[m[32mimport com.example.androidtutor.AndroidWidgets.Button;[m
+[32m+[m[32mimport com.example.androidtutor.R;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * A simple {@link Fragment} subclass.[m
+[32m+[m[32m */[m
+[32m+[m[32mpublic class ButtonExample extends Fragment {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    public ButtonExample() {[m
+[32m+[m[32m        // Required empty public constructor[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    public View onCreateView(LayoutInflater inflater, ViewGroup container,[m
+[32m+[m[32m                             Bundle savedInstanceState) {[m
+[32m+[m[32m        // Inflate the layout for this fragment[m
+[32m+[m[32m        return inflater.inflate(R.layout.button_example, container, false);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m}[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/Button/ButtonJava.java b/app/src/main/java/com/example/androidtutor/Button/ButtonJava.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9496048[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/Button/ButtonJava.java[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mpackage com.example.androidtutor.Button;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m[32mimport android.view.LayoutInflater;[m
+[32m+[m[32mimport android.view.View;[m
+[32m+[m[32mimport android.view.ViewGroup;[m
+[32m+[m
+[32m+[m[32mimport androidx.fragment.app.Fragment;[m
+[32m+[m
+[32m+[m[32mimport com.example.androidtutor.R;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * A simple {@link Fragment} subclass.[m
+[32m+[m[32m */[m
+[32m+[m[32mpublic class ButtonJava extends Fragment {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    public ButtonJava() {[m
+[32m+[m[32m        // Required empty public constructor[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    public View onCreateView(LayoutInflater inflater, ViewGroup container,[m
+[32m+[m[32m                             Bundle savedInstanceState) {[m
+[32m+[m[32m        // Inflate the layout for this fragment[m
+[32m+[m[32m        return inflater.inflate(R.layout.button_java, container, false);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m}[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/Button/ButtonXML.java b/app/src/main/java/com/example/androidtutor/Button/ButtonXML.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..547cfe0[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/Button/ButtonXML.java[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mpackage com.example.androidtutor.Button;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m[32mimport android.view.LayoutInflater;[m
+[32m+[m[32mimport android.view.View;[m
+[32m+[m[32mimport android.view.ViewGroup;[m
+[32m+[m
+[32m+[m[32mimport androidx.fragment.app.Fragment;[m
+[32m+[m
+[32m+[m[32mimport com.example.androidtutor.R;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * A simple {@link Fragment} subclass.[m
+[32m+[m[32m */[m
+[32m+[m[32mpublic class ButtonXML extends Fragment {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    public ButtonXML() {[m
+[32m+[m[32m        // Required empty public constructor[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    public View onCreateView(LayoutInflater inflater, ViewGroup container,[m
+[32m+[m[32m                             Bundle savedInstanceState) {[m
+[32m+[m[32m        // Inflate the layout for this fragment[m
+[32m+[m[32m        return inflater.inflate(R.layout.button_xml, container, false);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m}[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/EditText/EditTextExample.java b/app/src/main/java/com/example/androidtutor/EditText/EditTextExample.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..50ba3bd[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/EditText/EditTextExample.java[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mpackage com.example.androidtutor.EditText;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m[32mimport android.view.LayoutInflater;[m
+[32m+[m[32mimport android.view.View;[m
+[32m+[m[32mimport android.view.ViewGroup;[m
+[32m+[m
+[32m+[m[32mimport androidx.fragment.app.Fragment;[m
+[32m+[m
+[32m+[m[32mimport com.example.androidtutor.R;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * A simple {@link Fragment} subclass.[m
+[32m+[m[32m */[m
+[32m+[m[32mpublic class EditTextExample extends Fragment {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    public EditTextExample() {[m
+[32m+[m[32m        // Required empty public constructor[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    public View onCreateView(LayoutInflater inflater, ViewGroup container,[m
+[32m+[m[32m                             Bundle savedInstanceState) {[m
+[32m+[m[32m        // Inflate the layout for this fragment[m
+[32m+[m[32m        return inflater.inflate(R.layout.edit_text_example, container, false);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m}[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/EditText/EditTextJava.java b/app/src/main/java/com/example/androidtutor/EditText/EditTextJava.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0897b7a[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/EditText/EditTextJava.java[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mpackage com.example.androidtutor.EditText;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m[32mimport android.view.LayoutInflater;[m
+[32m+[m[32mimport android.view.View;[m
+[32m+[m[32mimport android.view.ViewGroup;[m
+[32m+[m
+[32m+[m[32mimport androidx.fragment.app.Fragment;[m
+[32m+[m
+[32m+[m[32mimport com.example.androidtutor.R;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * A simple {@link Fragment} subclass.[m
+[32m+[m[32m */[m
+[32m+[m[32mpublic class EditTextJava extends Fragment {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    public EditTextJava() {[m
+[32m+[m[32m        // Required empty public constructor[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    public View onCreateView(LayoutInflater inflater, ViewGroup container,[m
+[32m+[m[32m                             Bundle savedInstanceState) {[m
+[32m+[m[32m        // Inflate the layout for this fragment[m
+[32m+[m[32m        return inflater.inflate(R.layout.edit_text_java, container, false);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m}[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/EditText/EditTextXML.java b/app/src/main/java/com/example/androidtutor/EditText/EditTextXML.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..76afe1b[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/EditText/EditTextXML.java[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mpackage com.example.androidtutor.EditText;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m[32mimport android.view.LayoutInflater;[m
+[32m+[m[32mimport android.view.View;[m
+[32m+[m[32mimport android.view.ViewGroup;[m
+[32m+[m
+[32m+[m[32mimport androidx.fragment.app.Fragment;[m
+[32m+[m
+[32m+[m[32mimport com.example.androidtutor.R;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * A simple {@link Fragment} subclass.[m
+[32m+[m[32m */[m
+[32m+[m[32mpublic class EditTextXML extends Fragment {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    public EditTextXML() {[m
+[32m+[m[32m        // Required empty public constructor[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    public View onCreateView(LayoutInflater inflater, ViewGroup container,[m
+[32m+[m[32m                             Bundle savedInstanceState) {[m
+[32m+[m[32m        // Inflate the layout for this fragment[m
+[32m+[m[32m        return inflater.inflate(R.layout.edit_text_xml, container, false);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m}[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/Fragment/Tab1.java b/app/src/main/java/com/example/androidtutor/Fragment/Tab1.java[m
+[1mindex d4d161c..ad3b5cb 100644[m
+[1m--- a/app/src/main/java/com/example/androidtutor/Fragment/Tab1.java[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/Fragment/Tab1.java[m
+[36m@@ -10,6 +10,7 @@[m [mimport android.widget.Button;[m
+ [m
+ import androidx.fragment.app.Fragment;[m
+ [m
+[32m+[m[32mimport com.example.androidtutor.AndroidWidgets.EditText;[m
+ import com.example.androidtutor.AndroidWidgets.TextViewFragment;[m
+ import com.example.androidtutor.R;[m
+ import com.example.androidtutor.TextView.TextViewExample;[m
+[36m@@ -32,6 +33,22 @@[m [mpublic class Tab1 extends Fragment {[m
+         // Inflate the layout for this fragment[m
+         View v =  inflater.inflate(R.layout.activity_tutorial, container, false);[m
+         Button textview = v.findViewById(R.id.t1);[m
+[32m+[m[32m        Button edittext = v.findViewById(R.id.t2);[m
+[32m+[m[32m        Button button = v.findViewById(R.id.t3);[m
+[32m+[m[32m        Button radiobutton = v.findViewById(R.id.t4);[m
+[32m+[m[32m        Button checkbox = v.findViewById(R.id.t5);[m
+[32m+[m[32m        Button ratingbar = v.findViewById(R.id.t6);[m
+[32m+[m[32m        Button prograssbar = v.findViewById(R.id.t7);[m
+[32m+[m[32m        Button seekbar = v.findViewById(R.id.t8);[m
+[32m+[m[32m        Button switch_ = v.findViewById(R.id.t9);[m
+[32m+[m[32m        Button togglebutton = v.findViewById(R.id.t10);[m
+[32m+[m[32m        Button spinner = v.findViewById(R.id.t11);[m
+[32m+[m[32m        Button autocomplete_textview = v.findViewById(R.id.t12);[m
+[32m+[m[32m        Button multiautocomplete_textview = v.findViewById(R.id.t13);[m
+[32m+[m[32m        Button checkedtextview = v.findViewById(R.id.t14);[m
+[32m+[m[32m        Button imageswitcher = v.findViewById(R.id.t15);[m
+[32m+[m[32m        Button adapterviewflipper = v.findViewById(R.id.t16);[m
+[32m+[m
+         textview.setOnClickListener(new View.OnClickListener() {[m
+             @Override[m
+             public void onClick(View v) {[m
+[36m@@ -39,6 +56,13 @@[m [mpublic class Tab1 extends Fragment {[m
+                 startActivity(new Intent(getContext(), TextViewFragment.class));[m
+             }[m
+         });[m
+[32m+[m[32m        edittext.setOnClickListener(new View.OnClickListener() {[m
+[32m+[m[32m            @Override[m
+[32m+[m[32m            public void onClick(View v) {[m
+[32m+[m[32m                startActivity(new Intent(getContext(), EditText.class));[m
+[32m+[m[32m            }[m
+[32m+[m[32m        });[m
+[32m+[m
+ [m
+     return v;[m
+     }[m
+[1mdiff --git a/app/src/main/res/layout/activity_button.xml b/app/src/main/res/layout/activity_button.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0ec452b[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/res/layout/activity_button.xml[m
+[36m@@ -0,0 +1,29 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="utf-8"?>[m
+[32m+[m[32m<LinearLayout[m
+[32m+[m[32m    xmlns:android="http://schemas.android.com/apk/res/android"[m
+[32m+[m[32m    xmlns:app="http://schemas.android.com/apk/res-auto"[m
+[32m+[m[32m    xmlns:tools="http://schemas.android.com/tools"[m
+[32m+[m[32m    android:layout_width="match_parent"[m
+[32m+[m[32m    android:layout_height="match_parent"[m
+[32m+[m[32m    tools:context=".AndroidWidgets.Button"[m
+[32m+[m[32m    android:orientation="vertical">[m
+[32m+[m[32m    <androidx.appcompat.widget.Toolbar[m
+[32m+[m[32m        android:layout_width="match_parent"[m
+[32m+[m[32m        android:layout_height="wrap_content"[m
+[32m+[m[32m        android:background="@color/colorPrimary"[m
+[32m+[m[32m        app:titleTextColor="@color/white"[m
+[32m+[m[32m        app:title="@string/app_name"[m
+[32m+[m[32m        android:id="@+id/toolbar3"/>[m
+[32m+[m[32m    <androidx.viewpager.widget.ViewPager[m
+[32m+[m[32m        android:layout_width="match_parent"[m
+[32m+[m[32m        android:layout_height="wrap_content"[m
+[32m+[m[32m        android:id="@+id/viewpager3">[m
+[32m+[m
+[32m+[m[32m        <com.google.android.material.tabs.TabLayout[m
+[32m+[m[32m            android:layout_width="match_parent"[m
+[32m+[m[32m            android:id="@+id/tabs3"[m
+[32m+[m[32m            android:layout_height="wrap_content">[m
+[32m+[m
+[32m+[m[32m        </com.google.android.material.tabs.TabLayout>[m
+[32m+[m[32m    </androidx.viewpager.widget.ViewPager>[m
+[32m+[m[32m</LinearLayout>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/activity_edit_text.xml b/app/src/main/res/layout/activity_edit_text.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..699ad48[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/res/layout/activity_edit_text.xml[m
+[36m@@ -0,0 +1,33 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="utf-8"?>[m
+[32m+[m[32m<LinearLayout[m
+[32m+[m[32m    xmlns:android="http://schemas.android.com/apk/res/android"[m
+[32m+[m[32m    xmlns:app="http://schemas.android.com/apk/res-auto"[m
+[32m+[m[32m    xmlns:tools="http://schemas.android.com/tools"[m
+[32m+[m[32m    android:layout_width="match_parent"[m
+[32m+[m[32m    android:layout_height="match_parent"[m
+[32m+[m[32m    tools:context=".AndroidWidgets.EditText"[m
+[32m+[m[32m    android:orientation="vertical"[m
+[32m+[m[32m    >[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    <androidx.appcompat.widget.Toolbar[m
+[32m+[m[32m        android:layout_width="match_parent"[m
+[32m+[m[32m        android:layout_height="wrap_content"[m
+[32m+[m[32m        android:background="@color/colorPrimary"[m
+[32m+[m[32m        app:titleTextColor="@color/white"[m
+[32m+[m[32m        app:title="@string/app_name"[m
+[32m+[m[32m        android:id="@+id/toolbar2"/>[m
+[32m+[m[32m    <androidx.viewpager.widget.ViewPager[m
+[32m+[m[32m        android:layout_width="match_parent"[m
+[32m+[m[32m        android:layout_height="wrap_content"[m
+[32m+[m[32m        android:id="@+id/viewpager2">[m
+[32m+[m
+[32m+[m[32m        <com.google.android.material.tabs.TabLayout[m
+[32m+[m[32m            android:layout_width="match_parent"[m
+[32m+[m[32m            android:id="@+id/tabs2"[m
+[32m+[m[32m            android:layout_height="wrap_content">[m
+[32m+[m
+[32m+[m[32m        </com.google.android.material.tabs.TabLayout>[m
+[32m+[m[32m    </androidx.viewpager.widget.ViewPager>[m
+[32m+[m
+[32m+[m[32m</LinearLayout>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/activity_text_view_example.xml b/app/src/main/res/layout/activity_text_view_example.xml[m
+[1mindex 2de8451..5f75224 100644[m
+[1m--- a/app/src/main/res/layout/activity_text_view_example.xml[m
+[1m+++ b/app/src/main/res/layout/activity_text_view_example.xml[m
+[36m@@ -10,7 +10,7 @@[m
+         android:id="@+id/textView21"[m
+         android:layout_width="wrap_content"[m
+         android:layout_height="wrap_content"[m
+[31m-        android:text="TextView"[m
+[32m+[m[32m        android:text="This is a TextView"[m
+         android:textSize="28sp"[m
+         app:layout_constraintBottom_toBottomOf="parent"[m
+         app:layout_constraintEnd_toEndOf="parent"[m
+[1mdiff --git a/app/src/main/res/layout/activity_tutorial.xml b/app/src/main/res/layout/activity_tutorial.xml[m
+[1mindex 04ec233..649b603 100644[m
+[1m--- a/app/src/main/res/layout/activity_tutorial.xml[m
+[1m+++ b/app/src/main/res/layout/activity_tutorial.xml[m
+[36m@@ -43,62 +43,77 @@[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t2"[m
+                     android:text="EditText" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t3"[m
+                     android:text="Button" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t4"[m
+                     android:text="RadioButton" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t5"[m
+                     android:text="CheckBox" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t6"[m
+                     android:text="RatingBar" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t7"[m
+                     android:text="ProgressBar" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t8"[m
+                     android:text="SeekBar" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t9"[m
+                     android:text="Switch" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t10"[m
+                     android:text="ToggleButton" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t11"[m
+                     android:text="Spinner" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t12"[m
+                     android:text="AutoComplete TextView" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t13"[m
+                     android:text="MultiAutoComplete TextView" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t14"[m
+                     android:text="CheckedTextView" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t15"[m
+                     android:text="ImageSwitcher" />[m
+                 <Button[m
+                     android:layout_width="match_parent"[m
+                     android:layout_height="wrap_content"[m
+[32m+[m[32m                    android:id="@+id/t16"[m
+                     android:text="AdapterViewFlipper" />[m
+ [m
+                 <TextView[m
+[1mdiff --git a/app/src/main/res/layout/button_example.xml b/app/src/main/res/layout/button_example.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..61a4490[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/res/layout/button_example.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="utf-8"?>[m
+[32m+[m[32m<androidx.constraintlayout.widget.ConstraintLayout[m
+[32m+[m[32m    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"[m
+[32m+[m[32m    android:layout_height="match_parent">[m
+[32m+[m
+[32m+[m[32m</androidx.constraintlayout.widget.ConstraintLayout>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/button_java.xml b/app/src/main/res/layout/button_java.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..61a4490[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/res/layout/button_java.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="utf-8"?>[m
+[32m+[m[32m<androidx.constraintlayout.widget.ConstraintLayout[m
+[32m+[m[32m    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"[m
+[32m+[m[32m    android:layout_height="match_parent">[m
+[32m+[m
+[32m+[m[32m</androidx.constraintlayout.widget.ConstraintLayout>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/button_xml.xml b/app/src/main/res/layout/button_xml.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..61a4490[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/res/layout/button_xml.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="utf-8"?>[m
+[32m+[m[32m<androidx.constraintlayout.widget.ConstraintLayout[m
+[32m+[m[32m    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"[m
+[32m+[m[32m    android:layout_height="match_parent">[m
+[32m+[m
+[32m+[m[32m</androidx.constraintlayout.widget.ConstraintLayout>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/edit_text_example.xml b/app/src/main/res/layout/edit_text_example.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..61a4490[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/res/layout/edit_text_example.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="utf-8"?>[m
+[32m+[m[32m<androidx.constraintlayout.widget.ConstraintLayout[m
+[32m+[m[32m    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"[m
+[32m+[m[32m    android:layout_height="match_parent">[m
+[32m+[m
+[32m+[m[32m</androidx.constraintlayout.widget.ConstraintLayout>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/edit_text_java.xml b/app/src/main/res/layout/edit_text_java.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..61a4490[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/res/layout/edit_text_java.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="utf-8"?>[m
+[32m+[m[32m<androidx.constraintlayout.widget.ConstraintLayout[m
+[32m+[m[32m    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"[m
+[32m+[m[32m    android:layout_height="match_parent">[m
+[32m+[m
+[32m+[m[32m</androidx.constraintlayout.widget.ConstraintLayout>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/edit_text_xml.xml b/app/src/main/res/layout/edit_text_xml.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..61a4490[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/res/layout/edit_text_xml.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="utf-8"?>[m
+[32m+[m[32m<androidx.constraintlayout.widget.ConstraintLayout[m
+[32m+[m[32m    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"[m
+[32m+[m[32m    android:layout_height="match_parent">[m
+[32m+[m
+[32m+[m[32m</androidx.constraintlayout.widget.ConstraintLayout>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/xml.xml b/app/src/main/res/layout/xml.xml[m
+[1mindex 61a4490..4a9cd66 100644[m
+[1m--- a/app/src/main/res/layout/xml.xml[m
+[1m+++ b/app/src/main/res/layout/xml.xml[m
+[36m@@ -1,6 +1,20 @@[m
+ <?xml version="1.0" encoding="utf-8"?>[m
+ <androidx.constraintlayout.widget.ConstraintLayout[m
+[31m-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"[m
+[32m+[m[32m    xmlns:android="http://schemas.android.com/apk/res/android"[m
+[32m+[m[32m    xmlns:app="http://schemas.android.com/apk/res-auto"[m
+[32m+[m[32m    xmlns:tools="http://schemas.android.com/tools"[m
+[32m+[m[32m    android:layout_width="match_parent"[m
+     android:layout_height="match_parent">[m
+ [m
+[32m+[m[32m    <TextView[m
+[32m+[m[32m        android:id="@+id/textView22"[m
+[32m+[m[32m        android:layout_width="wrap_content"[m
+[32m+[m[32m        android:layout_height="wrap_content"[m
+[32m+[m[32m        android:text="TextView"[m
+[32m+[m[32m        app:layout_constraintBottom_toBottomOf="parent"[m
+[32m+[m[32m        app:layout_constraintEnd_toEndOf="parent"[m
+[32m+[m[32m        app:layout_constraintHorizontal_bias="0.3"[m
+[32m+[m[32m        app:layout_constraintStart_toStartOf="parent"[m
+[32m+[m[32m        app:layout_constraintTop_toTopOf="parent"[m
+[32m+[m[32m        app:layout_constraintVertical_bias="0.039" />[m
+ </androidx.constraintlayout.widget.ConstraintLayout>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml[m
+[1mindex 87b327e..bee2514 100644[m
+[1m--- a/app/src/main/res/values/strings.xml[m
+[1m+++ b/app/src/main/res/values/strings.xml[m
+[36m@@ -15,5 +15,10 @@[m
+     <!-- TODO: Remove or change this placeholder text -->[m
+     <string name="hello_blank_fragment">Hello blank fragment</string>[m
+ [m
+[32m+[m[32m<!--    Android Widgets Strings-->[m
+[32m+[m[32m    <string name="textviewxml">[m
+[32m+[m[41m        [m
+[32m+[m[32m    </string>[m
+[32m+[m
+ [m
+ </resources>[m
+
+[33mcommit 2288c089fd7ea11c14a438af98459209fe549f9c[m
+Author: = <=>
+Date:   Wed Jun 17 17:50:36 2020 +0530
+
+    TextViewButton Partially Done
+
+[1mdiff --git a/app/build.gradle b/app/build.gradle[m
+[1mindex dc796e7..6513724 100644[m
+[1m--- a/app/build.gradle[m
+[1m+++ b/app/build.gradle[m
+[36m@@ -27,6 +27,7 @@[m [mdependencies {[m
+     implementation 'androidx.appcompat:appcompat:1.0.2'[m
+     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'[m
+     implementation 'com.google.android.material:material:1.1.0'[m
+[32m+[m[32m    implementation 'androidx.legacy:legacy-support-v4:1.0.0'[m
+     testImplementation 'junit:junit:4.12'[m
+     androidTestImplementation 'androidx.test.ext:junit:1.1.0'[m
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'[m
+[1mdiff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml[m
+[1mindex e148541..b2a4237 100644[m
+[1m--- a/app/src/main/AndroidManifest.xml[m
+[1m+++ b/app/src/main/AndroidManifest.xml[m
+[36m@@ -11,7 +11,9 @@[m
+         android:roundIcon="@mipmap/ic_launcher_round"[m
+         android:supportsRtl="true"[m
+         android:theme="@style/AppTheme">[m
+[31m-        <activity android:name=".Tutorial"></activity>[m
+[32m+[m[32m        <activity android:name=".AndroidWidgets.TextViewFragment" />[m
+[32m+[m[32m        <activity android:name=".TextView.TextViewExample" />[m
+[32m+[m[32m        <activity android:name=".Tutorial" />[m
+         <activity android:name=".SliderScreen" />[m
+         <activity android:name=".PasswordActivity" />[m
+         <activity android:name=".Signin_Activity" />[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/AndroidWidgets/TextViewFragment.java b/app/src/main/java/com/example/androidtutor/AndroidWidgets/TextViewFragment.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1a900d9[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/AndroidWidgets/TextViewFragment.java[m
+[36m@@ -0,0 +1,42 @@[m
+[32m+[m[32mpackage com.example.androidtutor.AndroidWidgets;[m
+[32m+[m
+[32m+[m[32mimport androidx.appcompat.app.AppCompatActivity;[m
+[32m+[m[32mimport androidx.appcompat.widget.Toolbar;[m
+[32m+[m[32mimport androidx.viewpager.widget.ViewPager;[m
+[32m+[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m[32mimport android.widget.Button;[m
+[32m+[m
+[32m+[m[32mimport com.example.androidtutor.Fragment.Tab2;[m
+[32m+[m[32mimport com.example.androidtutor.Fragment.Tab3;[m
+[32m+[m[32mimport com.example.androidtutor.PagerAdapter;[m
+[32m+[m[32mimport com.example.androidtutor.R;[m
+[32m+[m[32mimport com.example.androidtutor.TextView.Java;[m
+[32m+[m[32mimport com.example.androidtutor.TextView.TextViewExample;[m
+[32m+[m[32mimport com.example.androidtutor.TextView.XML;[m
+[32m+[m[32mimport com.google.android.material.tabs.TabLayout;[m
+[32m+[m
+[32m+[m[32mpublic class TextViewFragment extends AppCompatActivity {[m
+[32m+[m
+[32m+[m[32m    private Button mapbutton;[m
+[32m+[m[32m    Button tut;[m
+[32m+[m
+[32m+[m[32m    private void setupViewpager(ViewPager viewpager){[m
+[32m+[m[32m        PagerAdapter adapter=new PagerAdapter(getSupportFragmentManager(),1);[m
+[32m+[m[32m        adapter.addFragment(new TextViewExample(),"Example");[m
+[32m+[m[32m        adapter.addFragment(new Java(),"Java Code");[m
+[32m+[m[32m        adapter.addFragment(new XML(),"XML Code");[m
+[32m+[m[32m        viewpager.setAdapter(adapter);[m
+[32m+[m[32m    }[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    protected void onCreate(Bundle savedInstanceState) {[m
+[32m+[m[32m        super.onCreate(savedInstanceState);[m
+[32m+[m[32m        setContentView(R.layout.activity_text_view_fragment);[m
+[32m+[m[32m        TabLayout tablayout= findViewById(R.id.tabs1);[m
+[32m+[m[32m        Toolbar toolbar=findViewById(R.id.toolbar1);[m
+[32m+[m[32m        setSupportActionBar(toolbar);[m
+[32m+[m[32m        ViewPager viewpager=findViewById(R.id.viewpager1);[m
+[32m+[m[32m        setupViewpager(viewpager);[m
+[32m+[m[32m        tablayout.setupWithViewPager(viewpager);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/Fragment/Tab1.java b/app/src/main/java/com/example/androidtutor/Fragment/Tab1.java[m
+[1mindex eaf5c83..d4d161c 100644[m
+[1m--- a/app/src/main/java/com/example/androidtutor/Fragment/Tab1.java[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/Fragment/Tab1.java[m
+[36m@@ -1,14 +1,18 @@[m
+ package com.example.androidtutor.Fragment;[m
+ [m
+ [m
+[32m+[m[32mimport android.content.Intent;[m
+ import android.os.Bundle;[m
+ import android.view.LayoutInflater;[m
+ import android.view.View;[m
+ import android.view.ViewGroup;[m
+[32m+[m[32mimport android.widget.Button;[m
+ [m
+ import androidx.fragment.app.Fragment;[m
+ [m
+[32m+[m[32mimport com.example.androidtutor.AndroidWidgets.TextViewFragment;[m
+ import com.example.androidtutor.R;[m
+[32m+[m[32mimport com.example.androidtutor.TextView.TextViewExample;[m
+ [m
+ [m
+ /**[m
+[36m@@ -26,7 +30,17 @@[m [mpublic class Tab1 extends Fragment {[m
+     public View onCreateView(LayoutInflater inflater, ViewGroup container,[m
+                              Bundle savedInstanceState) {[m
+         // Inflate the layout for this fragment[m
+[31m-        return inflater.inflate(R.layout.activity_tutorial, container, false);[m
+[32m+[m[32m        View v =  inflater.inflate(R.layout.activity_tutorial, container, false);[m
+[32m+[m[32m        Button textview = v.findViewById(R.id.t1);[m
+[32m+[m[32m        textview.setOnClickListener(new View.OnClickListener() {[m
+[32m+[m[32m            @Override[m
+[32m+[m[32m            public void onClick(View v) {[m
+[32m+[m[32m                //fragment to activity[m
+[32m+[m[32m                startActivity(new Intent(getContext(), TextViewFragment.class));[m
+[32m+[m[32m            }[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m[32m    return v;[m
+     }[m
+ [m
+ }[m
+[1mdiff --git a/app/src/main/java/com/example/androidtutor/TextView/Java.java b/app/src/main/java/com/example/androidtutor/TextView/Java.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..bf40e98[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/com/example/androidtutor/TextView/Java.java[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mpackage com.example.androidtutor.TextView;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m[32mimport android.view.LayoutInflater;[m
+[32m+[m[32mimport android.view.View;[m
+[32m+[m[32mimport android.view.ViewGroup;[m
+[32m+[m
+[32m+[m[32mimport androidx.fragment.app.Fragment;[m
+[32m+[m
+[32m+[m[32mimport com.example.androidtutor.R;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * A simple {@link Fragment} subclass.[m
+[32m+[m[32m */[m
+[32m+[m[32mpublic class Java extends Fragment {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    public Java() {[m
+[32m+[m[32m        // Required empty public constructor[m
+[32m+[m[32m    }[m
+[32m+[

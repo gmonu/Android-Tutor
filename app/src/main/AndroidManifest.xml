@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.androidtutor">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,7 +15,8 @@
         <activity android:name=".AndroidWidgets.Button"></activity>
         <activity android:name=".AndroidWidgets.EditText" />
         <activity android:name=".AndroidWidgets.TextViewFragment" />
-        <activity android:name=".TextView.TextViewExample" />
+        <activity android:name=".TextView.TextViewExample"
+            tools:ignore="Instantiatable" />
         <activity android:name=".Tutorial" />
         <activity android:name=".SliderScreen" />
         <activity android:name=".PasswordActivity" />

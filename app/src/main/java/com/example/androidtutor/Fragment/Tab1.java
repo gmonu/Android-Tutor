@@ -62,6 +62,12 @@ public class Tab1 extends Fragment {
                 startActivity(new Intent(getContext(), EditText.class));
             }
         });
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Button.class));
+            }
+        });
 
 
     return v;

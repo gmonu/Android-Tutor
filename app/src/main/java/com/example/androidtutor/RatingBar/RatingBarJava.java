@@ -1,4 +1,4 @@
-package com.example.androidtutor.Button;
+package com.example.androidtutor.RatingBar;
 
 
 import android.os.Bundle;
@@ -14,10 +14,10 @@ import com.example.androidtutor.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ButtonExample extends Fragment {
+public class RatingBarJava extends Fragment {
 
 
-    public ButtonExample() {
+    public RatingBarJava() {
         // Required empty public constructor
     }
 
@@ -26,7 +26,7 @@ public class ButtonExample extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.button_example, container, false);
+        return inflater.inflate(R.layout.activity_rating_bar_java, container, false);
     }
 
 }

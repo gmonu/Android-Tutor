@@ -1,5 +1,4 @@
-package com.example.androidtutor.Button;
-
+package com.example.androidtutor.RadioButton;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,10 +13,10 @@ import com.example.androidtutor.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ButtonExample extends Fragment {
+public class RadioButtonJava extends Fragment {
 
 
-    public ButtonExample() {
+    public RadioButtonJava() {
         // Required empty public constructor
     }
 
@@ -26,7 +25,7 @@ public class ButtonExample extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.button_example, container, false);
+        return inflater.inflate(R.layout.radiobuttonjava, container, false);
     }
 
 }

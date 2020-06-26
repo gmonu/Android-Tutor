@@ -16,7 +16,7 @@ import com.example.androidtutor.TextView.TextViewExample;
 import com.example.androidtutor.TextView.XML;
 import com.google.android.material.tabs.TabLayout;
 
-public class EditText extends AppCompatActivity {
+public class EditTextWidget extends AppCompatActivity {
 
     private void setupViewpager(ViewPager viewpager){
         PagerAdapter adapter=new PagerAdapter(getSupportFragmentManager(),1);

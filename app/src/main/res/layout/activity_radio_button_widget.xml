@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AndroidWidgets.Button"
+    tools:context=".AndroidWidgets.RadioButtonWidget"
     android:orientation="vertical">
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -13,15 +13,15 @@
         android:background="@color/colorPrimary"
         app:titleTextColor="@color/white"
         app:title="@string/app_name"
-        android:id="@+id/toolbar3"/>
+        android:id="@+id/toolbar4"/>
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/viewpager3">
+        android:id="@+id/viewpager4">
 
         <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
-            android:id="@+id/tabs3"
+            android:id="@+id/tabs4"
             android:layout_height="wrap_content">
 
         </com.google.android.material.tabs.TabLayout>

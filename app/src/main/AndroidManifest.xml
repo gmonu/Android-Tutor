@@ -12,10 +12,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AndroidWidgets.Button"></activity>
-        <activity android:name=".AndroidWidgets.EditText" />
+        <activity android:name=".ProgressBar.ProgressBarXML"></activity>
+        <activity android:name=".ProgressBar.ProgressBarJava" />
+        <activity android:name=".ProgressBar.ProgressBarExample" />
+        <activity android:name=".AndroidWidgets.ProgressBarWidget" />
+        <activity android:name=".RatingBar.RatingBarXML" />
+        <activity android:name=".RatingBar.RatingBarJava" />
+        <activity android:name=".RatingBar.RatingBarExample" />
+        <activity android:name=".AndroidWidgets.RatingBarWidget" />
+        <activity android:name=".CheckBox.CheckBoxXML" />
+        <activity android:name=".CheckBox.CheckBoxJava" />
+        <activity android:name=".AndroidWidgets.CheckBoxWidget" />
+        <activity android:name=".AndroidWidgets.RadioButtonWidget" />
+        <activity android:name=".AndroidWidgets.ButtonWidget" />
+        <activity android:name=".AndroidWidgets.EditTextWidget" />
         <activity android:name=".AndroidWidgets.TextViewFragment" />
-        <activity android:name=".TextView.TextViewExample"
+        <activity
+            android:name=".TextView.TextViewExample"
             tools:ignore="Instantiatable" />
         <activity android:name=".Tutorial" />
         <activity android:name=".SliderScreen" />

@@ -18,7 +18,7 @@
     <!--    Android Widgets Strings-->
     <string name="textviewxml">
         &lt;?xml version="1.0" encoding="utf-8"?>\n
-        &lt;androidx.constraintlayout.widget.ConstraintLayout\n
+        &lt;RelativeLayout\n
 
         \txmlns:android="http://schemas.android.com/apk/res/android"\n
         \t    xmlns:app="http://schemas.android.com/apk/res-auto"\n
@@ -40,9 +40,23 @@
         \tandroid:textColor="@color/black"\n
         \tapp:layout_constraintTop_toTopOf="parent"\n
         \tandroid:gravity="center_horizontal" />\n
-&lt;/androidx.constraintlayout.widget.ConstraintLayout>
+&lt;/RelativeLayout>
 
     </string>
+    <string name="textviewjava">
+        import android.support.v7.app.AppCompatActivity;\n
+import android.os.Bundle;\n
+
+public class MainActivity extends AppCompatActivity {\n
+
+                @Override\n
+                protected void onCreate(Bundle savedInstanceState) {\n
+                    super.onCreate(savedInstanceState);\n
+                    setContentView(R.layout.activity_main);\n
+\n
+                }\n
+ }
+    </string>>
 
 
 </resources>

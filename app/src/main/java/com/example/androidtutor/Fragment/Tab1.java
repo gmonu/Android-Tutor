@@ -16,6 +16,7 @@ import com.example.androidtutor.AndroidWidgets.EditTextWidget;
 import com.example.androidtutor.AndroidWidgets.ProgressBarWidget;
 import com.example.androidtutor.AndroidWidgets.RadioButtonWidget;
 import com.example.androidtutor.AndroidWidgets.RatingBarWidget;
+import com.example.androidtutor.AndroidWidgets.SeekBarWidget;
 import com.example.androidtutor.AndroidWidgets.TextViewFragment;
 import com.example.androidtutor.R;
 
@@ -95,6 +96,12 @@ public class Tab1 extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), ProgressBarWidget.class));
+            }
+        });
+        seekbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), SeekBarWidget.class));
             }
         });
 

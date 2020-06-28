@@ -12,6 +12,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".AndroidImagesAndMedia.ImageButton.ImageButtonWidget"></activity>
         <activity android:name=".ProgressBar.ProgressBarXML" />
+        <activity android:name=".SeekBar.SeekBarXML"></activity>
+        <activity android:name=".SeekBar.SeekBarJava" />
+        <activity android:name=".SeekBar.SeekBarExample" />
+        <activity android:name=".AndroidWidgets.SeekBarWidget" />
+        <activity android:name=".ProgressBar.ProgressBarXML" />
         <activity android:name=".ProgressBar.ProgressBarJava" />
         <activity android:name=".ProgressBar.ProgressBarExample" />
         <activity android:name=".AndroidWidgets.ProgressBarWidget" />

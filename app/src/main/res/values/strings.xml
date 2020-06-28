@@ -38,19 +38,21 @@
 &lt;/LinearLayout>
 
     </string>
-    <string name="imagebuttonxml">
-        &lt;?xml version="1.0" encoding="utf-8"?>\n
-        \t      &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android " \n
-        \t          android:orientation="vertical" android:layout_width="match_parent"\n
-        \t          android:layout_height="match_parent">\n
-\t&lt;ImageButton\n
-    \t\t    android:layout_width="170dp"\n
-    \t\t    android:layout_height="170dp"\n
-    \t\t    android:src="@drawable/ic_photography"\n
-    \t\t    android:layout_gravity="center"\n
-    \t\t    android:layout_marginTop="50dp"\n
-    \t\t    android:id="@+id/imgbt"/>\n
+    <string name="imagebuttonxml">"
+&lt;?xml version=\"1.0\" encoding=\"utf-8\"?>
+&lt;LinearLayout
+        xmlns:android=\"http://schemas.android.com/apk/res/android\"
+        android:orientation=\"vertical\"
+        android:layout_width=\"match_parent\"
+        android:layout_height=\"match_parent\">
 
-&lt;/LinearLayout>
+        \t&lt;ImageButton
+            android:layout_width=\"170dp\"
+            android:layout_height=\"170dp\"
+            android:src=\"@drawable/ic_photography\"
+            android:layout_gravity=\"center\"
+            android:layout_marginTop=\"50dp\"
+            android:id=\"@+id/imgbt\"/>
+&lt;/LinearLayout>"
     </string>
 </resources>

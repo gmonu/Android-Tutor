@@ -10,6 +10,8 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.androidtutor.AndroidImagesAndMedia.ImageButton.ImageButtonWidget;
+import com.example.androidtutor.AndroidImagesAndMedia.ImageView.ImageViewWidget;
 import com.example.androidtutor.AndroidWidgets.ButtonWidget;
 import com.example.androidtutor.AndroidWidgets.CheckBoxWidget;
 import com.example.androidtutor.AndroidWidgets.EditTextWidget;
@@ -24,7 +26,7 @@ import com.example.androidtutor.R;
  * A simple {@link Fragment} subclass.
  */
 public class Tab1 extends Fragment {
-
+private Button imageButton,imageView,videoView;
 
     public Tab1() {
         // Required empty public constructor
@@ -52,6 +54,21 @@ public class Tab1 extends Fragment {
         Button checkedtextview = v.findViewById(R.id.t14);
         Button imageswitcher = v.findViewById(R.id.t15);
         Button adapterviewflipper = v.findViewById(R.id.t16);
+        imageButton=v.findViewById(R.id.t17);
+        imageView=v.findViewById(R.id.t18);
+        videoView=v.findViewById(R.id.t19);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), ImageButtonWidget.class));
+            }
+        });
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), ImageViewWidget.class));
+            }
+        });
 
         textview.setOnClickListener(new View.OnClickListener() {
             @Override

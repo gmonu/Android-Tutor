@@ -130,14 +130,17 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/t17"
                     android:text="ImageButton" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/t18"
                     android:text="ImageView" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/t19"
                     android:text="VideoView" />
 
 

@@ -3,7 +3,6 @@
     <string name="todo">TODO</string>
     <string name="next">Next</string>
     <string name="back">Back</string>
-
     <string name="get_started">Get Started</string>
     <string name="screen1text">Learn all the things that are\n essential to build a cool\n android application</string>
     <string name="screen2text">Start Building your own app today,\n take help from this app.\nSee the code for particular\n feature of application</string>
@@ -17,32 +16,26 @@
 
     <!--    Android Widgets Strings-->
     <string name="textviewxml">
-        &lt;?xml version="1.0" encoding="utf-8"?>\n
-        &lt;androidx.constraintlayout.widget.ConstraintLayout\n
+        &lt;?xml version="1.0" encoding="utf-8"?>
+        &lt;LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        \txmlns:android="http://schemas.android.com/apk/res/android"\n
-        \t    xmlns:app="http://schemas.android.com/apk/res-auto"\n
-\t            xmlns:tools="http://schemas.android.com/tools"\n
-  \t          android:layout_width="match_parent"\n
-    \t        android:layout_height="match_parent"\n
-      \t      tools:context=".TextView.TextViewExample">\n
-
-    &lt;TextView\n
-       \t android:id="@+id/textView21"\n
-        \tandroid:layout_width="wrap_content"\n
-        \tandroid:layout_height="wrap_content"\n
-        \tandroid:text="This is a TextView"\n
-        \tandroid:textSize="28sp"\n
-        \tapp:layout_constraintBottom_toBottomOf="parent"\n
-        \tapp:layout_constraintEnd_toEndOf="parent"\n
-        \tapp:layout_constraintStart_toStartOf="parent"\n
-        \tandroid:textAlignment="center"\n
-        \tandroid:textColor="@color/black"\n
-        \tapp:layout_constraintTop_toTopOf="parent"\n
-        \tandroid:gravity="center_horizontal" />\n
-&lt;/androidx.constraintlayout.widget.ConstraintLayout>
+    &lt;TextView
+        android:id="@+id/textView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewxml"
+        android:textIsSelectable="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        />
+&lt;/LinearLayout>
 
     </string>
-
-
 </resources>

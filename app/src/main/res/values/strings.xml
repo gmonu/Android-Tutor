@@ -257,6 +257,7 @@ import android.widget.EditText;\n
         import android.widget.Button;\n
         import android.widget.CheckBox;\n
         import android.widget.Toast;\n
+        public class MainActivity extends AppCompatActivity {\n
         \tCheckBox c1, c2;\n
         \n
           \t  @Override\n
@@ -352,5 +353,70 @@ import android.widget.EditText;\n
 \n
 \t&lt;/LinearLayout>\n
 
+    </string>
+
+
+    <string name="ratingbarjava">
+
+import android.support.v7.app.AppCompatActivity;\n
+import android.widget.Button;\n
+import android.widget.RatingBar;\n
+import android.widget.Toast;\n
+\n
+\n
+public class MainActivity extends AppCompatActivity {\n
+          \t\tRatingBar ratingBar;\n
+\t        @Override\n
+\t\t				protected void onCreate(Bundle savedInstanceState) {\n
+	\t\t				super.onCreate(savedInstanceState);\n
+		\t\t			setContentView(R.layout.activity_main);\n
+        \t\t\tratingBar=(RatingBar)findViewById(R.id.rating);\n
+        \t\t\tButton ratingsubmitButton=(Button)findViewById(R.id.ratingbutton);\n
+
+\t\t\t        ratingsubmitButton.setOnClickListener(new View.OnClickListener() {\n\n
+      \t\t\t      @Override\n
+            \t\t\t\tpublic void onClick(View view) {\n
+                \t\t\t\tfloat rvalue=ratingBar.getRating();\n
+                \t\t\t\tToast.makeText(getContext(),"Rating:  "+rvalue,Toast.LENGTH_LONG).show();\n
+            \t\t\t\t}\n
+        \t\t\t\t});\n
+\n
+        \t\t\treturn v;\n
+
+    </string>
+
+    <string name="ratingbarxml">
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        \t&lt;LinearLayout\n
+          \t\t  xmlns:android="http://schemas.android.com/apk/res/android"\n
+           \t\t xmlns:app="http://schemas.android.com/apk/res-auto"\n
+            \t\txmlns:tools="http://schemas.android.com/tools"\n
+            \t\tandroid:layout_width="match_parent"\n
+            \t\tandroid:layout_height="match_parent"\n
+            \t\tandroid:orientation="vertical"\n
+            \t\ttools:context=".RatingBar.RatingBarExample">\n
+\n
+\n
+    \t&lt;RatingBar\n
+      \t\t  android:id="@+id/rating"\n
+        \t\tandroid:layout_width="wrap_content"\n
+        \t\tandroid:layout_height="wrap_content"\n
+        \t\tandroid:layout_gravity="center"\n
+        \t\tandroid:layout_marginTop="100dp"\n
+        \t\tandroid:stepSize="0.25"\n
+        \t\tandroid:numStars="5"\n
+        \t\tandroid:rating="2.5" />\n
+\n
+    \t&lt;Button\n
+        \t\tandroid:layout_width="wrap_content"\n
+        \t\tandroid:layout_height="wrap_content"\n
+      \t\t  android:id="@+id/ratingbutton"\n
+       \t\t android:layout_gravity="center"\n
+        \t\tandroid:layout_margin="20dp"\n
+        \t\tandroid:padding="10dp"\n
+        \t\tandroid:text="Submit"\n
+        \t\tandroid:textSize="20sp"\n
+        \t\tandroid:textStyle="bold" />\n
+&lt;/LinearLayout>\n
     </string>
 </resources>

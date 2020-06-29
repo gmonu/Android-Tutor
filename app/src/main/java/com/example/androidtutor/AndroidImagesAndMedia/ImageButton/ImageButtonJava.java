@@ -1,4 +1,4 @@
-package com.example.androidtutor.RatingBar;
+package com.example.androidtutor.AndroidImagesAndMedia.ImageButton;
 
 
 import android.os.Bundle;
@@ -14,10 +14,10 @@ import com.example.androidtutor.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RatingBarJava extends Fragment {
+public class ImageButtonJava extends Fragment {
 
 
-    public RatingBarJava() {
+    public ImageButtonJava() {
         // Required empty public constructor
     }
 
@@ -26,7 +26,7 @@ public class RatingBarJava extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_tutorial, container, false);
+        return inflater.inflate(R.layout.image_button_java, container, false);
     }
 
 }

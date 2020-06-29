@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.androidtutor">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/log"
@@ -12,6 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AndroidImagesAndMedia.ImageButton.ImageButtonWidget"></activity>
+        <activity android:name=".ProgressBar.ProgressBarXML" />
         <activity android:name=".SeekBar.SeekBarXML"></activity>
         <activity android:name=".SeekBar.SeekBarJava" />
         <activity android:name=".SeekBar.SeekBarExample" />
@@ -31,6 +31,7 @@
         <activity android:name=".AndroidWidgets.ButtonWidget" />
         <activity android:name=".AndroidWidgets.EditTextWidget" />
         <activity android:name=".AndroidWidgets.TextViewFragment" />
+        <activity android:name=".AndroidImagesAndMedia.ImageView.ImageViewWidget"/>
         <activity
             android:name=".TextView.TextViewExample"
             tools:ignore="Instantiatable" />
@@ -54,5 +55,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

@@ -16,26 +16,42 @@
 
     <!--    Android Widgets Strings-->
     <string name="textviewxml">
-        &lt;?xml version="1.0" encoding="utf-8"?>
-        &lt;LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout\n
+            \t\txmlns:android="http://schemas.android.com/apk/res/android"\n
+            \t\txmlns:app="http://schemas.android.com/apk/res-auto"\n
+            \t\txmlns:tools="http://schemas.android.com/tools"\n
+            \t\tandroid:layout_width="match_parent"\n
+            \t\tandroid:layout_height="match_parent">\n\n
 
-    &lt;TextView
-        android:id="@+id/textView22"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/textviewxml"
-        android:textIsSelectable="true"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        />
+    &lt;TextView\n
+        \t\tandroid:id="@+id/textView22"\n
+        \t\tandroid:layout_width="match_parent"\n
+        \t\tandroid:layout_height="wrap_content"\n
+        \t\tandroid:text="@string/textviewxml"\n
+        \t\tandroid:textIsSelectable="true"\n
+        \t\tandroid:textColor="@color/black"\n
+        \t\tandroid:textSize="16sp"\n
+        \t\tandroid:layout_margin="10dp"\n
+        \t\tandroid:padding="10dp"\n
+        \t/>\n\n
 &lt;/LinearLayout>
+
+    </string>
+
+    <string name="textviewjava">
+    \timport android.support.v7.app.AppCompatActivity;\n
+    \timport android.os.Bundle;\n\n
+
+    \tpublic class MainActivity extends AppCompatActivity {\n
+
+    \t@Override\n
+    \tprotected void onCreate(Bundle savedInstanceState) {\n
+    \tsuper.onCreate(savedInstanceState);\n
+    \tsetContentView(R.layout.activity_main);\n
+\n\n
+    \t}\n
+    \t}\n
 
     </string>
     <string name="imagebuttonxml">
@@ -52,5 +68,289 @@
     \t\t    android:id="@+id/imgbt"/>\n
 
 &lt;/LinearLayout>
+    </string>
+
+    <string name="buttonjava">
+import android.support.v7.app.AppCompatActivity;\n
+import android.view.View;\n
+import android.widget.Button;\n
+import android.widget.Toast;\n
+\n
+\n
+public class MainActivity extends AppCompatActivity {\n
+    \tButton btndemo;\n
+    \n
+                    @Override\n
+      \t              protected void onCreate(Bundle savedInstanceState) {\n
+        \t                            super.onCreate(savedInstanceState);\n
+         \t                           setContentView(R.layout.activity_main);\n
+           \t                         btndemo=(Button)findViewById(R.id.btndemo);\n
+             \t                       btndemo.setOnClickListener(new View.OnClickListener() {\n
+                                       @Override\n
+                 \t                       public void onClick(View view) {\n
+               \t                             Toast.makeText(ButtonActivity.this,"Clicked",Toast.LENGTH_LONG).show();\n
+                 \t                       }\n
+                   \t                 });\n
+                    \t}\n
+        \n
+}\n
+    </string>
+
+    <string name="buttonxml">
+     &lt;LinearLayout\n
+         xmlns:android="http://schemas.android.com/apk/res/android"\n
+         android:layout_width="match_parent"\n
+         android:layout_height="match_parent"\n
+         >\n
+        &lt;TextView\n
+            android:id="@+id/textView22"\n
+            android:layout_width="match_parent"\n
+            android:layout_height="wrap_content"\n
+            android:text="@string/buttonxml"\n
+            android:textIsSelectable="true"\n
+            android:textColor="@color/black"\n
+            android:textSize="16sp"\n
+            android:scrollHorizontally="true"\n
+            android:layout_margin="10dp"\n
+            android:padding="10dp"\n
+            />\n
+  \n
+&lt;/LinearLayout>
+    </string>
+    <string name="edittextjava">
+import android.support.v7.app.AppCompatActivity;\n
+import android.os.Bundle;\n
+import android.widget.EditText;\n
+        \tpublic class MainActivity extends AppCompatActivity {\n
+    \t\tEditText edttxt;\n
+                @Override\n
+        \t        protected void onCreate(Bundle savedInstanceState) {\n
+          \t                      super.onCreate(savedInstanceState);\n
+            \t                    setContentView(R.layout.activity_main);\n
+              \t                  edttxt=(EditText)findViewById(R.id.edtdemo);\n
+\n
+                \t            }\n
+}\n
+
+    </string>
+
+
+
+    <string name="edittextxml">
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"\n
+            android:layout_width="match_parent"\n
+            android:layout_height="match_parent"\n
+            xmlns:tools="http://schemas.android.com/tools"\n
+            android:orientation="vertical"\n
+            tools:context=".EditText.EditTextExample">\n
+\n
+    &lt;EditText\n
+        android:id="@+id/edtdemo"\n
+        android:layout_width="match_parent"\n
+        android:layout_height="wrap_content"\n
+        android:layout_margin="30dp"\n
+        android:layout_gravity="center"\n
+        />\n
+\n
+\n
+&lt;/LinearLayout>\n
+    </string>
+
+
+    <string name="radiobuttonjava">
+            import android.support.v7.app.AppCompatActivity;\n
+            import android.os.Bundle;\n
+            import android.widget.RadioButton;\n
+            import android.widget.RadioGroup;\n
+\n
+                \tpublic class MainActivity extends AppCompatActivity {\n
+                  \t\t       RadioButton r1, r2, r3;\n
+\n
+                \t\tprotected void onCreate(Bundle savedInstanceState) {\n
+					\t\t			super.onCreate(savedInstanceState);\n
+						\t\t		setContentView(R.layout.activity_main);\n
+\t\tr1 = v.findViewById(R.id.radio1);\n
+
+    \t\t    r2 = (RadioButton)findViewById(R.id.radio2);\n
+        \t\t r3 = (RadioButton)findViewById(R.id.radio3);\n
+       \t\t RadioGroup radiogroup = (RadioButton)findViewById(R.id.radioattendgroup);\n
+        \t\tradiogroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {\n
+            \t@Override\n
+            \t\tpublic void onCheckedChanged(RadioGroup radioGroup, int i)\n
+            \t\t{\n
+                \t\t\t\tswitch (i){\n
+                    \t\t\t\t\t\t\tcase R.id.radio1:\n
+                    \t\t\t\t\t\t\t\t\t    Toast.makeText(getContext(),"Your choice:  "+r1.getText().toString(),Toast.LENGTH_SHORT).show();\n
+                     \t\t\t\t\t\t\t   \t\tbreak;\n
+                    \t\t\t\t\t\t\tcase R.id.radio2:\n
+                        \t\t\t\t\t\t\t\t\tToast.makeText(getContext(),"Your choice:  "+r2.getText().toString(),Toast.LENGTH_SHORT).show();\n
+                        \t\t\t\t\t\t\t\t\tbreak;\n
+                    \t\t\t\t\t\t\tcase R.id.radio3:\n
+                        \t\t\t\t\t\t\t\t\tToast.makeText(getContext(),"Your choice:  "+r3.getText().toString(),Toast.LENGTH_SHORT).show();\n
+                        \t\t\t\t\t\t\t\t\tbreak;\n
+                    \t\t\t\t\t\t\tdefault:\n
+                       \t\t\t\t\t\t\t\t\t break;\n
+                \t\t\t\t\t\t\t}\n
+            \t\t\t\t\t\t\t}\n
+        \t\t});\n
+
+\n
+\n
+        \t\treturn v;\n
+            \t\t}\n
+            \t}\n
+    </string>
+
+    <string name="radiobuttonxml">
+&lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout\n
+          \t  xmlns:android="http://schemas.android.com/apk/res/android"\n
+            \tandroid:layout_width="match_parent"\n
+            \tandroid:layout_height="match_parent"\n
+            \tandroid:orientation="vertical"\n
+            \t>\n
+    &lt;RadioGroup\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:id="@+id/radioattendgroup">\n
+    &lt;RadioButton\n
+        \tandroid:id="@+id/radio1"\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_marginTop="10dp"\n
+        \tandroid:layout_marginLeft="20dp"\n
+        \tandroid:text="Think"\n
+        \tandroid:textColor="#154"\n
+        \tandroid:textSize="20sp"\n
+        \tandroid:textStyle="bold" />\n
+\n
+    &lt;RadioButton\n
+        \tandroid:id="@+id/radio2"\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_marginTop="10dp"\n
+        \tandroid:layout_marginLeft="20dp"\n
+        \tandroid:text="And"\n
+        \tandroid:textColor="#154"\n
+        \tandroid:textSize="20sp"\n
+        \tandroid:textStyle="bold" />\n
+\n
+    &lt;RadioButton\n
+        \tandroid:id="@+id/radio3"\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_marginLeft="20dp"\n
+       \t android:layout_marginTop="10dp"\n
+        \tandroid:text="Build"\n
+        \tandroid:textColor="#154"\n
+        \tandroid:textSize="20sp"\n
+        \tandroid:textStyle="bold" />\n
+    &lt;/RadioGroup>\n
+&lt;/LinearLayout>\n
+    </string>
+
+
+    <string name="checkboxjava">
+        import android.support.v7.app.AppCompatActivity;\n
+        import android.os.Bundle;\n
+        import android.widget.Button;\n
+        import android.widget.CheckBox;\n
+        import android.widget.Toast;\n
+        \tCheckBox c1, c2;\n
+        \n
+          \t  @Override\n
+			\t\t	protected void onCreate(Bundle savedInstanceState) {\n
+				\t\t\t				super.onCreate(savedInstanceState);\n
+					\t\t\t			setContentView(R.layout.activity_main);\n
+         \t\t\tc1 = (CheckBox)findViewById(R.id.it);\n
+        \t\t\tc2 = (CheckBox)findViewById(R.id.cse);\n
+        \t\t\tButton b = (Button)findViewById(R.id.checkbutton);\n
+\n
+        \t\t\tb.setOnClickListener(new View.OnClickListener() {\n
+            \t\t\t@Override\n
+            \t\t\tpublic void onClick(View v) {\n
+                \t\t\t\tif(c1.isChecked())\n
+               \t\t\t\t {\n
+                    \t\t\t\tToast.makeText(getContext(), "Congrats You got IT course", Toast.LENGTH_SHORT).show();\n
+\n
+\t\t\t\t                }\n
+       \t\t\t if(c2.isChecked())\n
+             \t\t\t\t   {\n
+                    \t\t\t\tToast.makeText(getContext(), "Congrats You got CSE course", Toast.LENGTH_SHORT).show();\n
+                \t\t\t\t}\n
+            \t\t\t}\n
+        \t\t});\n
+\n
+        \treturn v;\n
+        \n
+        \t}\n
+        }\n
+    </string>
+
+
+    <string name="checkboxxml">\n
+&lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout\n
+     \t       xmlns:android="http://schemas.android.com/apk/res/android"\n
+       \t     xmlns:tools="http://schemas.android.com/tools"\n
+         \t   android:layout_width="match_parent"\n
+          \t  android:layout_height="match_parent"\n
+           \t android:orientation="vertical"\n
+            \ttools:context=".CheckBox.CheckBoxExample">\n
+\n
+    \t\t&lt;TextView\n
+        \t\t\tandroid:layout_width="wrap_content"\n
+        \t\t\tandroid:layout_height="wrap_content"\n
+        \t\t\tandroid:text="Select Course:"\n
+        \t\t\tandroid:layout_gravity="center"\n
+        \t\t\tandroid:textColor="@color/black"\n
+        \t\t\tandroid:textSize="20sp"\n
+        \t\t\tandroid:textStyle="bold" />\n
+\n
+    \t&lt;LinearLayout\n
+      \t\t  android:id="@+id/checklinearLayout"\n
+        \t\tandroid:layout_width="match_parent"\n
+        \t\tandroid:layout_height="wrap_content"\n
+        \t\tandroid:layout_marginTop="30dp"\n
+        \t\tandroid:orientation="vertical">\n
+\n
+        \t\t&lt;CheckBox\n
+           \t\t\t android:id="@+id/it"\n
+            \t\t\tandroid:layout_width="wrap_content"\n
+            \t\t\tandroid:layout_height="wrap_content"\n
+            \t\t\tandroid:checked="false"\n
+            \t\t\tandroid:padding="20dp"\n
+           \t\t\t android:text="I T"\n
+            \t\t\tandroid:textColor="@color/colorPrimary"\n
+            \t\t\tandroid:textSize="30dp"\n
+            \t\t\t/>\n
+\n
+        \t\t&lt;CheckBox\n
+            \t\t\tandroid:id="@+id/cse"\n
+            \t\t\tandroid:layout_width="wrap_content"\n
+            \t\t\tandroid:layout_height="wrap_content"\n
+            \t\t\tandroid:checked="false"\n
+            \t\t\tandroid:padding="20dp"\n
+            \t\t\tandroid:text="C S E"\n
+            \t\t\tandroid:textColor="@color/colorPrimary"\n
+            \t\t\tandroid:textSize="30dp"\n
+            \t\t\t/>\n
+\n
+\n
+        &lt;Button\n
+            \t\t\tandroid:layout_width="wrap_content"\n
+            \t\t\tandroid:layout_height="wrap_content"\n
+            \t\t\tandroid:id="@+id/checkbutton"\n
+            \t\t\tandroid:textSize="20sp"\n
+            \t\t\tandroid:text="Submit"\n
+            \t\t\tandroid:layout_gravity="center"\n
+            \t\t\t/>\n
+\n
+    \t\t&lt;/LinearLayout>\n
+\n
+\n
+\t&lt;/LinearLayout>\n
+
     </string>
 </resources>

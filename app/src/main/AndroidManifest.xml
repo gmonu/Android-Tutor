@@ -10,22 +10,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".AndroidImagesAndMedia.ImageButton.ImageButtonWidget"></activity>
-        <activity android:name=".ProgressBar.ProgressBarXML" />
-        <activity android:name=".SeekBar.SeekBarXML"></activity>
-        <activity android:name=".SeekBar.SeekBarJava" />
-        <activity android:name=".SeekBar.SeekBarExample" />
+        <activity android:name=".ProgressBar.ProgressBarXML"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".SeekBar.SeekBarXML"
+            tools:ignore="Instantiatable"></activity>
+        <activity android:name=".SeekBar.SeekBarJava"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".SeekBar.SeekBarExample"
+            tools:ignore="Instantiatable" />
         <activity android:name=".AndroidWidgets.SeekBarWidget" />
-        <activity android:name=".ProgressBar.ProgressBarXML" />
-        <activity android:name=".ProgressBar.ProgressBarJava" />
-        <activity android:name=".ProgressBar.ProgressBarExample" />
+        <activity android:name=".ProgressBar.ProgressBarXML"
+            tools:ignore="DuplicateActivity" />
+        <activity android:name=".ProgressBar.ProgressBarJava"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".ProgressBar.ProgressBarExample"
+            tools:ignore="Instantiatable" />
         <activity android:name=".AndroidWidgets.ProgressBarWidget" />
-        <activity android:name=".RatingBar.RatingBarXML" />
-        <activity android:name=".RatingBar.RatingBarJava" />
-        <activity android:name=".RatingBar.RatingBarExample" />
+        <activity android:name=".RatingBar.RatingBarXML"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".RatingBar.RatingBarJava"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".RatingBar.RatingBarExample"
+            tools:ignore="Instantiatable" />
         <activity android:name=".AndroidWidgets.RatingBarWidget" />
-        <activity android:name=".CheckBox.CheckBoxXML" />
-        <activity android:name=".CheckBox.CheckBoxJava" />
+        <activity android:name=".CheckBox.CheckBoxXML"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".CheckBox.CheckBoxJava"
+            tools:ignore="Instantiatable" />
         <activity android:name=".AndroidWidgets.CheckBoxWidget" />
         <activity android:name=".AndroidWidgets.RadioButtonWidget" />
         <activity android:name=".AndroidWidgets.ButtonWidget" />
@@ -47,13 +66,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

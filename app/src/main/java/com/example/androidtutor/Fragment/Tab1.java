@@ -121,6 +121,12 @@ private Button imageButton,imageView,videoView;
                 startActivity(new Intent(getContext(), SeekBarWidget.class));
             }
         });
+//        switch_.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getContext(), switchwidget.class));
+//            }
+//        });
 
 
         return v;

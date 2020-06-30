@@ -419,4 +419,148 @@ public class MainActivity extends AppCompatActivity {\n
         \t\tandroid:textStyle="bold" />\n
 &lt;/LinearLayout>\n
     </string>
+
+    <string name="progressbarjava">
+
+import android.support.v7.app.AppCompatActivity;\n
+import android.os.Bundle;\n
+import android.widget.Button;\n
+import android.widget.ProgressBar;\n
+import android.widget.Toast;\n
+\n
+\n
+\tpublic class MainActivity extends AppCompatActivity {\n
+ \t   ProgressBar progressbarDemo;\n
+ \t   Button btnprogressbar;\n
+\t    private int progressStatus = 0;\n
+\t    private Handler handler = new Handler();\n
+\n
+   \t @Override\n
+    \tprotected void onCreate(Bundle savedInstanceState) {\n
+      \t\t  super.onCreate(savedInstanceState);\n
+      \t\t  setContentView(R.layout.activity_main);\n
+        \t\tprogressbarDemo = (ProgressBar) findViewById(R.id.ProgressBarDemo);\n
+        \t\tbtnprogressbar= (Button) findViewById(R.id.btnprogressbar);\n
+\t\t        btnprogressbar.setOnClickListener(new View.OnClickListener() {\n
+    \t      @Override\n
+      \t  \t    public void onClick(View v) {\n
+        \t\t        new Thread(new Runnable() {\n
+            \t\t        public void run() {\n
+                \t\t\t        while (progressStatus &lt; 100) {\n
+                      \t\t\t\t      progressStatus += 10;\n
+\n
+                            \t\t\t\thandler.post(new Runnable() {\n
+                                \t\t\t\t\tpublic void run() {\n
+                                   \t\t\t\t\t progressbarDemo.setProgress(progressStatus);\n
+                                    \t\t\t\t\tif(progressStatus==100) {\n
+                                   \t\t\t\t\t     progressbarDemo.setProgress(progressStatus);\n
+                                        \t\t\t\t\tToast.makeText(getApplicationContext(), "Download Complete", Toast.LENGTH_SHORT).show();\n
+                                   \t\t\t\t\t }\n
+                                \t\t\t\t}\n
+                           \t\t\t });\n
+                            \t\t\t\ttry {\n
+                                \t\t\t\t\tThread.sleep(1000);\n
+                            \t\t\t\t} catch (InterruptedException e) {\n
+                                \t\t\t\t\te.printStackTrace();\n
+                           \t\t\t\t\t }\n
+                        \t\t\t\t\t}\n
+                    \t\t\t\t}\n
+               \t\t\t }).start();\n
+           \t\t }\n
+        \t});\n
+    }\n
+\n
+} \n </string>
+
+    <string name="progressbasxml">
+&lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout\n
+       \t     xmlns:android="http://schemas.android.com/apk/res/android"\n
+         \t   xmlns:app="http://schemas.android.com/apk/res-auto"\n
+          \t  xmlns:tools="http://schemas.android.com/tools"\n
+           \t android:layout_width="match_parent"\n
+           \t android:layout_height="match_parent"\n
+           \t android:orientation="vertical"\n
+           \t tools:context=".ProgressBar.ProgressBarExample">\n\n
+\n
+    &lt;view\n
+       \t android:layout_width="0dp"\n
+        \tandroid:layout_height="0dp"\n
+        \tandroid:layout_marginTop="100dp"\n
+        >&lt;/view>\n\n
+    &lt;ProgressBar\n
+\n
+        \tandroid:id="@+id/ProgressBarDemo"\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_margin="30dp"\n
+        \tandroid:indeterminate="false"\n
+        \tandroid:max="100"\n
+        \tstyle="@style/Widget.AppCompat.ProgressBar.Horizontal"\n
+        \t/>\n\n
+    &lt;Button\n
+        \tandroid:layout_width="wrap_content"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:padding="10dp"\n
+        \tandroid:layout_gravity="center"\n
+        \tandroid:textSize="20dp"\n
+        \tandroid:id="@+id/btnprogressbar"\n
+        \tandroid:text="Start"/>\n
+\n
+&lt;/LinearLayout>
+
+    </string>
+
+    <string name="seekbarjava">
+
+        import android.widget.SeekBar;\n
+import android.widget.Toast;\n
+\n
+public class MainActivity extends AppCompatActivity {\n
+\tSeekBar seekbarDemo;\n
+\t\t\t\t				@Override\n
+\t\t\t\t				protected void onCreate(Bundle savedInstanceState) {\n
+		\t\t\t\t			super.onCreate(savedInstanceState);\n
+				\t\t\t\t	setContentView(R.layout.activity_main);\n
+		\t\t\t\t			seekbarDemo=(SeekBar)findViewById(R.id.seekbarDemo);\n
+\t\t\t\t							seekbarDemo.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {\n
+		\t\t\t\t\t\t\t\t						int seekbarProgreesValue = 0;\n
+\n
+						\t\t\t\t		public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {\n
+						\t\t\t\t\t\t\t\t						seekbarProgreesValue = progress;\n
+							\t\t\t\t	}\n
+\n
+\t\t\t\t								public void onStartTrackingTouch(SeekBar seekBar) {\n
+		\t\t\t\t\t\t\t\t							\n
+					\t\t\t\t			}\n
+\n
+							\t\t\t\t	public void onStopTrackingTouch(SeekBar seekBar) {\n
+									\t\t\t\t\t\t\t\t			Toast.makeText(MainActivity.this, "Seekbar progress :" +  seekbarProgreesValue,\n
+										\t\t\t\t\t\t\t\t				Toast.LENGTH_SHORT).show();\n
+							\t\t\t\t\t\t\t\t	}\n
+							\t\t\t\t});\n
+				\t\t}\n
+   \n
+}\n
+    </string>
+
+    <string name="seekbarxml">
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"\n
+            \txmlns:app="http://schemas.android.com/apk/res-auto"\n
+            \txmlns:tools="http://schemas.android.com/tools"\n
+            \tandroid:layout_width="match_parent"\n
+            \tandroid:layout_height="match_parent"\n
+            \ttools:context=".SeekBar.SeekBarExample">\n
+\n
+    &lt;SeekBar\n
+        \tandroid:id="@+id/seekbarDemo"\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_margin="20dp"\n
+        \tandroid:max="100"\n
+        \t/>\n
+&lt;/LinearLayout>\n
+
+    </string>
 </resources>

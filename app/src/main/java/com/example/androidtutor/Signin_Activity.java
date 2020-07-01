@@ -172,11 +172,26 @@ public class Signin_Activity extends AppCompatActivity {
     }
     private void validate(String userName, String userPassword) {
 
+//        if(userName.isEmpty()|| userPassword.isEmpty())
+//        {
+//            Toast.makeText(Signin_Activity.this, "Please Fill all the details",Toast.LENGTH_SHORT).show();
+//            counter--;
+//            Info.setText("No. of attempts remaining" +counter);
+//            progressDialog.dismiss();
+//            if(counter == 0)
+//            {
+//                Login.setEnabled(false);
+//            }
+//        }
+
+
         progressDialog.setMessage("Just Wait while we are validating you");
         progressDialog.show();
+
         firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
                 if(task.isSuccessful())
                 {
                     progressDialog.dismiss();

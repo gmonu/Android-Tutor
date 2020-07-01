@@ -8,19 +8,17 @@
     tools:context=".Signin_Activity">
 
 
-    <ImageView
-        android:layout_width="177dp"
-        android:layout_height="53dp"
-        android:background="@drawable/upphoto"
-        app:layout_constraintBottom_toTopOf="@+id/textView23"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.741">
-
-
-    </ImageView>
+<!--    <ImageView-->
+<!--        android:layout_width="177dp"-->
+<!--        android:layout_height="53dp"-->
+<!--        android:background="@drawable/upphoto"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textView23"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.482"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.741">-->
+<!--    </ImageView>-->
 
     <TextView
         android:id="@+id/textView23"

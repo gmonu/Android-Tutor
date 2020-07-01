@@ -69,13 +69,6 @@
 <activity android:name=".AndroidWidgets.Switch.SwitchWidget"></activity>
         <activity android:name=".AndroidWidgets.ToggleButton.ToggleButtonWidget"></activity>
 
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
     </application>
 
 

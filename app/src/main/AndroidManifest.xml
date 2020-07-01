@@ -68,7 +68,7 @@
         </activity>
 <activity android:name=".AndroidWidgets.Switch.SwitchWidget"></activity>
         <activity android:name=".AndroidWidgets.ToggleButton.ToggleButtonWidget"></activity>
-
+   <activity android:name=".AndroidWidgets.Spinner.SpinnerWidget"></activity>
     </application>
 
 

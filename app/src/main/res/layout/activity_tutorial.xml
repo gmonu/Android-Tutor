@@ -28,6 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
+                    android:textSize="25sp"
                     android:layout_gravity="center_horizontal"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -39,81 +40,145 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t1"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/widgetbuttondesign"
                     android:text="TextView" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t2"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="EditText" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t3"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="Button" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t4"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="RadioButton" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t5"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="CheckBox" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t6"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="RatingBar" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t7"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="ProgressBar" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t8"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="SeekBar" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t9"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="Switch" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t10"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="ToggleButton" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t11"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="Spinner" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t12"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="AutoComplete TextView" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t13"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="MultiAutoComplete TextView" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t14"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="CheckedTextView" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t15"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="ImageSwitcher" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/t16"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/widgetbuttondesign"
+                    android:layout_marginTop="8dp"
                     android:text="AdapterViewFlipper" />
 
                 <TextView

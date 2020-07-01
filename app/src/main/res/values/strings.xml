@@ -11,7 +11,7 @@
     <string name="share">share</string>
     <string name="todo1">TODO</string>
     <string name="logout">Logout</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--    Android Widgets Strings-->
@@ -38,6 +38,22 @@
 &lt;/LinearLayout>
 
     </string>
+
+    <string name="textviewjava">
+    \timport android.support.v7.app.AppCompatActivity;\n
+    \timport android.os.Bundle;\n\n
+
+    \tpublic class MainActivity extends AppCompatActivity {\n
+
+    \t@Override\n
+    \tprotected void onCreate(Bundle savedInstanceState) {\n
+    \tsuper.onCreate(savedInstanceState);\n
+    \tsetContentView(R.layout.activity_main);\n
+\n\n
+    \t}\n
+    \t}\n
+
+    </string>
     <string name="imagebuttonxml">"
 &lt;?xml version=\"1.0\" encoding=\"utf-8\"?>
 &lt;LinearLayout
@@ -54,6 +70,624 @@
             android:layout_marginTop=\"50dp\"
             android:id=\"@+id/imgbt\"/>
 &lt;/LinearLayout>"
+&lt;/LinearLayout>
+    </string>
+
+    <string name="buttonjava">
+import android.support.v7.app.AppCompatActivity;\n
+import android.view.View;\n
+import android.widget.Button;\n
+import android.widget.Toast;\n
+\n
+\n
+public class MainActivity extends AppCompatActivity {\n
+    \tButton btndemo;\n
+    \n
+                    @Override\n
+      \t              protected void onCreate(Bundle savedInstanceState) {\n
+        \t                            super.onCreate(savedInstanceState);\n
+         \t                           setContentView(R.layout.activity_main);\n
+           \t                         btndemo=(Button)findViewById(R.id.btndemo);\n
+             \t                       btndemo.setOnClickListener(new View.OnClickListener() {\n
+                                       @Override\n
+                 \t                       public void onClick(View view) {\n
+               \t                             Toast.makeText(ButtonActivity.this,"Clicked",Toast.LENGTH_LONG).show();\n
+                 \t                       }\n
+                   \t                 });\n
+                    \t}\n
+        \n
+}\n
+    </string>
+
+    <string name="buttonxml">
+     &lt;LinearLayout\n
+         xmlns:android="http://schemas.android.com/apk/res/android"\n
+         android:layout_width="match_parent"\n
+         android:layout_height="match_parent"\n
+         >\n
+        &lt;TextView\n
+            android:id="@+id/textView22"\n
+            android:layout_width="match_parent"\n
+            android:layout_height="wrap_content"\n
+            android:text="@string/buttonxml"\n
+            android:textIsSelectable="true"\n
+            android:textColor="@color/black"\n
+            android:textSize="16sp"\n
+            android:scrollHorizontally="true"\n
+            android:layout_margin="10dp"\n
+            android:padding="10dp"\n
+            />\n
+  \n
+&lt;/LinearLayout>
+    </string>
+    <string name="edittextjava">
+import android.support.v7.app.AppCompatActivity;\n
+import android.os.Bundle;\n
+import android.widget.EditText;\n
+        \tpublic class MainActivity extends AppCompatActivity {\n
+    \t\tEditText edttxt;\n
+                @Override\n
+        \t        protected void onCreate(Bundle savedInstanceState) {\n
+          \t                      super.onCreate(savedInstanceState);\n
+            \t                    setContentView(R.layout.activity_main);\n
+              \t                  edttxt=(EditText)findViewById(R.id.edtdemo);\n
+\n
+                \t            }\n
+}\n
+
+    </string>
+
+
+
+    <string name="edittextxml">
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"\n
+            android:layout_width="match_parent"\n
+            android:layout_height="match_parent"\n
+            xmlns:tools="http://schemas.android.com/tools"\n
+            android:orientation="vertical"\n
+            tools:context=".EditText.EditTextExample">\n
+\n
+    &lt;EditText\n
+        android:id="@+id/edtdemo"\n
+        android:layout_width="match_parent"\n
+        android:layout_height="wrap_content"\n
+        android:layout_margin="30dp"\n
+        android:layout_gravity="center"\n
+        />\n
+\n
+\n
+&lt;/LinearLayout>\n
+    </string>
+
+
+    <string name="radiobuttonjava">
+            import android.support.v7.app.AppCompatActivity;\n
+            import android.os.Bundle;\n
+            import android.widget.RadioButton;\n
+            import android.widget.RadioGroup;\n
+\n
+                \tpublic class MainActivity extends AppCompatActivity {\n
+                  \t\t       RadioButton r1, r2, r3;\n
+\n
+                \t\tprotected void onCreate(Bundle savedInstanceState) {\n
+					\t\t			super.onCreate(savedInstanceState);\n
+						\t\t		setContentView(R.layout.activity_main);\n
+\t\tr1 = v.findViewById(R.id.radio1);\n
+
+    \t\t    r2 = (RadioButton)findViewById(R.id.radio2);\n
+        \t\t r3 = (RadioButton)findViewById(R.id.radio3);\n
+       \t\t RadioGroup radiogroup = (RadioButton)findViewById(R.id.radioattendgroup);\n
+        \t\tradiogroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {\n
+            \t@Override\n
+            \t\tpublic void onCheckedChanged(RadioGroup radioGroup, int i)\n
+            \t\t{\n
+                \t\t\t\tswitch (i){\n
+                    \t\t\t\t\t\t\tcase R.id.radio1:\n
+                    \t\t\t\t\t\t\t\t\t    Toast.makeText(getContext(),"Your choice:  "+r1.getText().toString(),Toast.LENGTH_SHORT).show();\n
+                     \t\t\t\t\t\t\t   \t\tbreak;\n
+                    \t\t\t\t\t\t\tcase R.id.radio2:\n
+                        \t\t\t\t\t\t\t\t\tToast.makeText(getContext(),"Your choice:  "+r2.getText().toString(),Toast.LENGTH_SHORT).show();\n
+                        \t\t\t\t\t\t\t\t\tbreak;\n
+                    \t\t\t\t\t\t\tcase R.id.radio3:\n
+                        \t\t\t\t\t\t\t\t\tToast.makeText(getContext(),"Your choice:  "+r3.getText().toString(),Toast.LENGTH_SHORT).show();\n
+                        \t\t\t\t\t\t\t\t\tbreak;\n
+                    \t\t\t\t\t\t\tdefault:\n
+                       \t\t\t\t\t\t\t\t\t break;\n
+                \t\t\t\t\t\t\t}\n
+            \t\t\t\t\t\t\t}\n
+        \t\t});\n
+
+\n
+\n
+        \t\treturn v;\n
+            \t\t}\n
+            \t}\n
+    </string>
+
+    <string name="radiobuttonxml">
+&lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout\n
+          \t  xmlns:android="http://schemas.android.com/apk/res/android"\n
+            \tandroid:layout_width="match_parent"\n
+            \tandroid:layout_height="match_parent"\n
+            \tandroid:orientation="vertical"\n
+            \t>\n
+    &lt;RadioGroup\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:id="@+id/radioattendgroup">\n
+    &lt;RadioButton\n
+        \tandroid:id="@+id/radio1"\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_marginTop="10dp"\n
+        \tandroid:layout_marginLeft="20dp"\n
+        \tandroid:text="Think"\n
+        \tandroid:textColor="#154"\n
+        \tandroid:textSize="20sp"\n
+        \tandroid:textStyle="bold" />\n
+\n
+    &lt;RadioButton\n
+        \tandroid:id="@+id/radio2"\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_marginTop="10dp"\n
+        \tandroid:layout_marginLeft="20dp"\n
+        \tandroid:text="And"\n
+        \tandroid:textColor="#154"\n
+        \tandroid:textSize="20sp"\n
+        \tandroid:textStyle="bold" />\n
+\n
+    &lt;RadioButton\n
+        \tandroid:id="@+id/radio3"\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_marginLeft="20dp"\n
+       \t android:layout_marginTop="10dp"\n
+        \tandroid:text="Build"\n
+        \tandroid:textColor="#154"\n
+        \tandroid:textSize="20sp"\n
+        \tandroid:textStyle="bold" />\n
+    &lt;/RadioGroup>\n
+&lt;/LinearLayout>\n
+    </string>
+
+
+    <string name="checkboxjava">
+        import android.support.v7.app.AppCompatActivity;\n
+        import android.os.Bundle;\n
+        import android.widget.Button;\n
+        import android.widget.CheckBox;\n
+        import android.widget.Toast;\n
+        public class MainActivity extends AppCompatActivity {\n
+        \tCheckBox c1, c2;\n
+        \n
+          \t  @Override\n
+			\t\t	protected void onCreate(Bundle savedInstanceState) {\n
+				\t\t\t				super.onCreate(savedInstanceState);\n
+					\t\t\t			setContentView(R.layout.activity_main);\n
+         \t\t\tc1 = (CheckBox)findViewById(R.id.it);\n
+        \t\t\tc2 = (CheckBox)findViewById(R.id.cse);\n
+        \t\t\tButton b = (Button)findViewById(R.id.checkbutton);\n
+\n
+        \t\t\tb.setOnClickListener(new View.OnClickListener() {\n
+            \t\t\t@Override\n
+            \t\t\tpublic void onClick(View v) {\n
+                \t\t\t\tif(c1.isChecked())\n
+               \t\t\t\t {\n
+                    \t\t\t\tToast.makeText(getContext(), "Congrats You got IT course", Toast.LENGTH_SHORT).show();\n
+\n
+\t\t\t\t                }\n
+       \t\t\t if(c2.isChecked())\n
+             \t\t\t\t   {\n
+                    \t\t\t\tToast.makeText(getContext(), "Congrats You got CSE course", Toast.LENGTH_SHORT).show();\n
+                \t\t\t\t}\n
+            \t\t\t}\n
+        \t\t});\n
+\n
+        \treturn v;\n
+        \n
+        \t}\n
+        }\n
+    </string>
+
+
+    <string name="checkboxxml">\n
+&lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout\n
+     \t       xmlns:android="http://schemas.android.com/apk/res/android"\n
+       \t     xmlns:tools="http://schemas.android.com/tools"\n
+         \t   android:layout_width="match_parent"\n
+          \t  android:layout_height="match_parent"\n
+           \t android:orientation="vertical"\n
+            \ttools:context=".CheckBox.CheckBoxExample">\n
+\n
+    \t\t&lt;TextView\n
+        \t\t\tandroid:layout_width="wrap_content"\n
+        \t\t\tandroid:layout_height="wrap_content"\n
+        \t\t\tandroid:text="Select Course:"\n
+        \t\t\tandroid:layout_gravity="center"\n
+        \t\t\tandroid:textColor="@color/black"\n
+        \t\t\tandroid:textSize="20sp"\n
+        \t\t\tandroid:textStyle="bold" />\n
+\n
+    \t&lt;LinearLayout\n
+      \t\t  android:id="@+id/checklinearLayout"\n
+        \t\tandroid:layout_width="match_parent"\n
+        \t\tandroid:layout_height="wrap_content"\n
+        \t\tandroid:layout_marginTop="30dp"\n
+        \t\tandroid:orientation="vertical">\n
+\n
+        \t\t&lt;CheckBox\n
+           \t\t\t android:id="@+id/it"\n
+            \t\t\tandroid:layout_width="wrap_content"\n
+            \t\t\tandroid:layout_height="wrap_content"\n
+            \t\t\tandroid:checked="false"\n
+            \t\t\tandroid:padding="20dp"\n
+           \t\t\t android:text="I T"\n
+            \t\t\tandroid:textColor="@color/colorPrimary"\n
+            \t\t\tandroid:textSize="30dp"\n
+            \t\t\t/>\n
+\n
+        \t\t&lt;CheckBox\n
+            \t\t\tandroid:id="@+id/cse"\n
+            \t\t\tandroid:layout_width="wrap_content"\n
+            \t\t\tandroid:layout_height="wrap_content"\n
+            \t\t\tandroid:checked="false"\n
+            \t\t\tandroid:padding="20dp"\n
+            \t\t\tandroid:text="C S E"\n
+            \t\t\tandroid:textColor="@color/colorPrimary"\n
+            \t\t\tandroid:textSize="30dp"\n
+            \t\t\t/>\n
+\n
+\n
+        &lt;Button\n
+            \t\t\tandroid:layout_width="wrap_content"\n
+            \t\t\tandroid:layout_height="wrap_content"\n
+            \t\t\tandroid:id="@+id/checkbutton"\n
+            \t\t\tandroid:textSize="20sp"\n
+            \t\t\tandroid:text="Submit"\n
+            \t\t\tandroid:layout_gravity="center"\n
+            \t\t\t/>\n
+\n
+    \t\t&lt;/LinearLayout>\n
+\n
+\n
+\t&lt;/LinearLayout>\n
+
+    </string>
+
+
+    <string name="ratingbarjava">
+
+import android.support.v7.app.AppCompatActivity;\n
+import android.widget.Button;\n
+import android.widget.RatingBar;\n
+import android.widget.Toast;\n
+\n
+\n
+public class MainActivity extends AppCompatActivity {\n
+          \t\tRatingBar ratingBar;\n
+\t        @Override\n
+\t\t				protected void onCreate(Bundle savedInstanceState) {\n
+	\t\t				super.onCreate(savedInstanceState);\n
+		\t\t			setContentView(R.layout.activity_main);\n
+        \t\t\tratingBar=(RatingBar)findViewById(R.id.rating);\n
+        \t\t\tButton ratingsubmitButton=(Button)findViewById(R.id.ratingbutton);\n
+
+\t\t\t        ratingsubmitButton.setOnClickListener(new View.OnClickListener() {\n\n
+      \t\t\t      @Override\n
+            \t\t\t\tpublic void onClick(View view) {\n
+                \t\t\t\tfloat rvalue=ratingBar.getRating();\n
+                \t\t\t\tToast.makeText(getContext(),"Rating:  "+rvalue,Toast.LENGTH_LONG).show();\n
+            \t\t\t\t}\n
+        \t\t\t\t});\n
+\n
+        \t\t\treturn v;\n
+
+    </string>
+
+    <string name="ratingbarxml">
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        \t&lt;LinearLayout\n
+          \t\t  xmlns:android="http://schemas.android.com/apk/res/android"\n
+           \t\t xmlns:app="http://schemas.android.com/apk/res-auto"\n
+            \t\txmlns:tools="http://schemas.android.com/tools"\n
+            \t\tandroid:layout_width="match_parent"\n
+            \t\tandroid:layout_height="match_parent"\n
+            \t\tandroid:orientation="vertical"\n
+            \t\ttools:context=".RatingBar.RatingBarExample">\n
+\n
+\n
+    \t&lt;RatingBar\n
+      \t\t  android:id="@+id/rating"\n
+        \t\tandroid:layout_width="wrap_content"\n
+        \t\tandroid:layout_height="wrap_content"\n
+        \t\tandroid:layout_gravity="center"\n
+        \t\tandroid:layout_marginTop="100dp"\n
+        \t\tandroid:stepSize="0.25"\n
+        \t\tandroid:numStars="5"\n
+        \t\tandroid:rating="2.5" />\n
+\n
+    \t&lt;Button\n
+        \t\tandroid:layout_width="wrap_content"\n
+        \t\tandroid:layout_height="wrap_content"\n
+      \t\t  android:id="@+id/ratingbutton"\n
+       \t\t android:layout_gravity="center"\n
+        \t\tandroid:layout_margin="20dp"\n
+        \t\tandroid:padding="10dp"\n
+        \t\tandroid:text="Submit"\n
+        \t\tandroid:textSize="20sp"\n
+        \t\tandroid:textStyle="bold" />\n
+&lt;/LinearLayout>\n
+    </string>
+
+    <string name="progressbarjava">
+
+import android.support.v7.app.AppCompatActivity;\n
+import android.os.Bundle;\n
+import android.widget.Button;\n
+import android.widget.ProgressBar;\n
+import android.widget.Toast;\n
+\n
+\n
+\tpublic class MainActivity extends AppCompatActivity {\n
+ \t   ProgressBar progressbarDemo;\n
+ \t   Button btnprogressbar;\n
+\t    private int progressStatus = 0;\n
+\t    private Handler handler = new Handler();\n
+\n
+   \t @Override\n
+    \tprotected void onCreate(Bundle savedInstanceState) {\n
+      \t\t  super.onCreate(savedInstanceState);\n
+      \t\t  setContentView(R.layout.activity_main);\n
+        \t\tprogressbarDemo = (ProgressBar) findViewById(R.id.ProgressBarDemo);\n
+        \t\tbtnprogressbar= (Button) findViewById(R.id.btnprogressbar);\n
+\t\t        btnprogressbar.setOnClickListener(new View.OnClickListener() {\n
+    \t      @Override\n
+      \t  \t    public void onClick(View v) {\n
+        \t\t        new Thread(new Runnable() {\n
+            \t\t        public void run() {\n
+                \t\t\t        while (progressStatus &lt; 100) {\n
+                      \t\t\t\t      progressStatus += 10;\n
+\n
+                            \t\t\t\thandler.post(new Runnable() {\n
+                                \t\t\t\t\tpublic void run() {\n
+                                   \t\t\t\t\t progressbarDemo.setProgress(progressStatus);\n
+                                    \t\t\t\t\tif(progressStatus==100) {\n
+                                   \t\t\t\t\t     progressbarDemo.setProgress(progressStatus);\n
+                                        \t\t\t\t\tToast.makeText(getApplicationContext(), "Download Complete", Toast.LENGTH_SHORT).show();\n
+                                   \t\t\t\t\t }\n
+                                \t\t\t\t}\n
+                           \t\t\t });\n
+                            \t\t\t\ttry {\n
+                                \t\t\t\t\tThread.sleep(1000);\n
+                            \t\t\t\t} catch (InterruptedException e) {\n
+                                \t\t\t\t\te.printStackTrace();\n
+                           \t\t\t\t\t }\n
+                        \t\t\t\t\t}\n
+                    \t\t\t\t}\n
+               \t\t\t }).start();\n
+           \t\t }\n
+        \t});\n
+    }\n
+\n
+} \n </string>
+
+    <string name="progressbasxml">
+&lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout\n
+       \t     xmlns:android="http://schemas.android.com/apk/res/android"\n
+         \t   xmlns:app="http://schemas.android.com/apk/res-auto"\n
+          \t  xmlns:tools="http://schemas.android.com/tools"\n
+           \t android:layout_width="match_parent"\n
+           \t android:layout_height="match_parent"\n
+           \t android:orientation="vertical"\n
+           \t tools:context=".ProgressBar.ProgressBarExample">\n\n
+\n
+    &lt;view\n
+       \t android:layout_width="0dp"\n
+        \tandroid:layout_height="0dp"\n
+        \tandroid:layout_marginTop="100dp"\n
+        >&lt;/view>\n\n
+    &lt;ProgressBar\n
+\n
+        \tandroid:id="@+id/ProgressBarDemo"\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_margin="30dp"\n
+        \tandroid:indeterminate="false"\n
+        \tandroid:max="100"\n
+        \tstyle="@style/Widget.AppCompat.ProgressBar.Horizontal"\n
+        \t/>\n\n
+    &lt;Button\n
+        \tandroid:layout_width="wrap_content"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:padding="10dp"\n
+        \tandroid:layout_gravity="center"\n
+        \tandroid:textSize="20dp"\n
+        \tandroid:id="@+id/btnprogressbar"\n
+        \tandroid:text="Start"/>\n
+\n
+&lt;/LinearLayout>
+
+    </string>
+
+    <string name="seekbarjava">
+
+        import android.widget.SeekBar;\n
+import android.widget.Toast;\n
+\n
+public class MainActivity extends AppCompatActivity {\n
+\tSeekBar seekbarDemo;\n
+\t\t\t\t				@Override\n
+\t\t\t\t				protected void onCreate(Bundle savedInstanceState) {\n
+		\t\t\t\t			super.onCreate(savedInstanceState);\n
+				\t\t\t\t	setContentView(R.layout.activity_main);\n
+		\t\t\t\t			seekbarDemo=(SeekBar)findViewById(R.id.seekbarDemo);\n
+\t\t\t\t							seekbarDemo.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {\n
+		\t\t\t\t\t\t\t\t						int seekbarProgreesValue = 0;\n
+\n
+						\t\t\t\t		public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {\n
+						\t\t\t\t\t\t\t\t						seekbarProgreesValue = progress;\n
+							\t\t\t\t	}\n
+\n
+\t\t\t\t								public void onStartTrackingTouch(SeekBar seekBar) {\n
+		\t\t\t\t\t\t\t\t							\n
+					\t\t\t\t			}\n
+\n
+							\t\t\t\t	public void onStopTrackingTouch(SeekBar seekBar) {\n
+									\t\t\t\t\t\t\t\t			Toast.makeText(MainActivity.this, "Seekbar progress :" +  seekbarProgreesValue,\n
+										\t\t\t\t\t\t\t\t				Toast.LENGTH_SHORT).show();\n
+							\t\t\t\t\t\t\t\t	}\n
+							\t\t\t\t});\n
+				\t\t}\n
+   \n
+}\n
+    </string>
+
+    <string name="seekbarxml">
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"\n
+            \txmlns:app="http://schemas.android.com/apk/res-auto"\n
+            \txmlns:tools="http://schemas.android.com/tools"\n
+            \tandroid:layout_width="match_parent"\n
+            \tandroid:layout_height="match_parent"\n
+            \ttools:context=".SeekBar.SeekBarExample">\n
+\n
+    &lt;SeekBar\n
+        \tandroid:id="@+id/seekbarDemo"\n
+        \tandroid:layout_width="match_parent"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_margin="20dp"\n
+        \tandroid:max="100"\n
+        \t/>\n
+&lt;/LinearLayout>\n
+
+    </string>
+
+    <string name="switchjava"
+        >
+
+        import android.support.v7.app.AppCompatActivity;\n
+import android.graphics.Color;\n
+import android.os.Bundle;\n
+import android.widget.LinearLayout;\n
+import android.widget.Switch;\n
+import android.widget.Toast;\n
+\n
+\n
+public class MainActivity extends AppCompatActivity {\n
+    \tSwitch SwitchDemo;\n
+    \tLinearLayout switchLayout;\n
+\n
+	\t			@Override\n
+	\t\t			protected void onCreate(Bundle savedInstanceState) {\n
+	\t\t							super.onCreate(savedInstanceState);\n
+		\t\t						setContentView(R.layout.activity_main);\n
+			\t\t					switchLayout=(LinearLayout)findViewById(R.id.switchlayout);\n
+			\t\t					SwitchDemo = (Switch) findViewById(R.id.SwitchDemo);\n
+			\t\t					\n
+			\t\t							SwitchDemo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {\n
+			\t\t\t\t										public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {\n
+		\t\t\t\t\t\t														if(SwitchDemo.isChecked())\n
+					\t\t\t\t											{\n
+							\t\t\t\t\t\t										switchLayout.setBackgroundColor(Color.YELLOW);\n
+										\t\t\t\t\t\t							Toast.makeText(getApplicationContext(), "SwitchState :" + SwitchDemo.getTextOn().toString(), Toast.LENGTH_LONG).show();\n
+													\t\t\t\t\t\t			}\n
+													\t\t\t\t\t\t			else {\n
+												\t\t\t\t\t\t					switchLayout.setBackgroundColor(Color.RED);\n
+													\t\t\t\t\t\t				Toast.makeText(getApplicationContext(), "SwitchState :" + SwitchDemo.getTextOff().toString(), Toast.LENGTH_LONG).show();\n
+													\t\t\t\t			}\n
+												\t\t\t\t	}\n
+										\t\t});\n\n
+\t
+\n
+\t				}\n
+  \t \n
+}\n
+
+
+    </string>
+
+    <string name="Switchxml">
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout\n
+        \t    xmlns:android="http://schemas.android.com/apk/res/android"\n
+          \t  android:layout_width="match_parent"\n
+          \t  android:layout_height="match_parent"\n
+           \t android:id="@+id/switchlayout"\n
+           \t android:orientation="vertical">\n
+\n
+    &lt;Switch\n
+       \t android:id="@+id/SwitchDemo"\n
+        \tandroid:layout_width="wrap_content"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_margin="30dp"\n
+        \tandroid:layout_gravity="center"\n
+        \tandroid:checked="false"\n
+        \tandroid:textSize="30dp"\n
+        \tandroid:text="Switch"\n
+        \tandroid:textOff="Off"\n
+        \tandroid:textOn="On" />\n
+&lt;/LinearLayout>\n
+    </string>
+
+    <string name="togglebuttonjava">
+import android.support.v7.app.AppCompatActivity;\n
+import android.os.Bundle;\n
+import android.view.View;\n
+import android.widget.Toast;\n
+import android.widget.ToggleButton;\n
+\n
+\n
+\tpublic class MainActivity extends AppCompatActivity {\n
+  \t\t\n      ToggleButton ToggleButtonDemo;\n
+\t\n\n
+  \t          \t\t        @Override\n
+        \n\t\t    \t        protected void onCreate(Bundle savedInstanceState) {\n
+                    \t\t\t\t            super.onCreate(savedInstanceState);\n
+                    \t\t\t\t            setContentView(R.layout.activity_toggle_button);\n
+                     \t\t\t\t           ToggleButtonDemo = (ToggleButton) findViewById(R.id.ToggleButtonDemo);\n
+                        \t\t\t\t        ToggleButtonDemo.setOnClickListener(new View.OnClickListener() {\n
+                                \t\t\t\t         \t       @Override\n
+                                       \t\t\t\t\t         public void onClick(View view) {\n
+                                              \t\t\t\t\t      if(ToggleButtonDemo.isChecked()){\n
+                                                       \t\t\t\t\t Toast.makeText(getApplicationContext(),"ToggleButton:-"\n+ToggleButtonDemo.getText().toString(), Toast.LENGTH_SHORT).show();\n
+                                                   \t\t\t\t\t }\n
+                                                 \t\t\t\t\t   else {\n
+                                                     \t\t\t\t\t   Toast.makeText(getApplicationContext(),"ToggleButton:-"\n+ToggleButtonDemo.getText().toString(), Toast.LENGTH_LONG).show();\n
+                                                   \t\t\t\t\t }\n
+\n\n
+  \n\t\t\t                                              }\n
+          \t\t\t                          });\n
+               \t\t     }\n
+       \t \n
+\t}
+    </string>
+    <string name="togglebuttonxml">
+        &lt;?xml version="1.0" encoding="utf-8"?>
+        &lt;LinearLayout\n
+\t\n
+\t          xmlns:android="http://schemas.android.com/apk/res/android"\n
+            \tandroid:layout_width="match_parent"\n
+            \tandroid:layout_height="match_parent"\n
+            \tandroid:orientation="vertical">\n
+\n
+\n
+    &lt;ToggleButton\n
+       \t android:id="@+id/ToggleButtonDemo"\n
+       \t android:layout_width="332dp"\n
+       \t android:textSize="25sp"\n
+       \t android:layout_height="wrap_content"\n
+       \t android:layout_gravity="center_horizontal"\n
+       \t android:layout_margin="200dp"\n
+       \t android:checked="false"\n
+        \tandroid:drawablePadding="20dp"\n
+       \t android:textColor="#000" />\n
+\n
+&lt;/LinearLayout>
     </string>
     <string name="imagebuttonjava">
 "import android.os.Bundle;

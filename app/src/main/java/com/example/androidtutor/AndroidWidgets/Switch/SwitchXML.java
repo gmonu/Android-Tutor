@@ -1,4 +1,4 @@
-package com.example.androidtutor.RatingBar;
+package com.example.androidtutor.AndroidWidgets.Switch;
 
 
 import android.os.Bundle;
@@ -14,11 +14,11 @@ import com.example.androidtutor.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RatingBarJava extends Fragment {
+public class SwitchXML extends Fragment {
 
 
-    public RatingBarJava() {
-        // Required empty public constructor
+    public SwitchXML() {
+        // Sw empty public constructor
     }
 
 
@@ -26,7 +26,7 @@ public class RatingBarJava extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_rating_bar_java, container, false);
+        return inflater.inflate(R.layout.switchxml, container, false);
     }
 
 }

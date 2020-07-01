@@ -35,7 +35,7 @@ public class Registration_Activity extends AppCompatActivity {
 
 
         userAge = (EditText)findViewById(R.id.etAge);
-        userProfilepic = (ImageView)findViewById(R.id.ivpic);
+
         setupUIview();
 
         firebaseAuth = FirebaseAuth.getInstance();

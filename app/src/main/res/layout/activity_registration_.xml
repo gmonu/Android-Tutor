@@ -4,96 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Registration_Activity">
+
+    <ImageView
+        android:layout_width="237dp"
+        android:layout_height="82dp"
+        android:background="@drawable/upphoto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"></ImageView>
 
     <Button
         android:id="@+id/bregister"
         android:layout_width="220dp"
         android:layout_height="57dp"
+        android:background="@drawable/widgetbuttondesign"
+        android:backgroundTint="@color/white"
         android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="@color/dot_light_screen1"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7" />
+        app:layout_constraintVertical_bias="0.778" />
 
-    <EditText
-        android:id="@+id/etemail"
-        android:layout_width="352dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="Email Id"
-        android:inputType="textEmailAddress"
+    <TextView
+        android:id="@+id/tvAlready"
+        android:layout_width="366dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
+        android:text="Already Signed In? log In."
+        android:textAlignment="center"
+        android:textColor="@color/YellowGreen"
+        android:textSize="28dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
-
-    <EditText
-        android:id="@+id/etname"
-        android:layout_width="350dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217" />
+        app:layout_constraintVertical_bias="0.888" />
 
     <EditText
         android:id="@+id/etpassword"
         android:layout_width="354dp"
         android:layout_height="54dp"
+        android:background="@color/Aquamarine"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textColorHint="@color/IndianRed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.524" />
 
-    <TextView
-        android:id="@+id/tvAlready"
-        android:layout_width="261dp"
-        android:layout_height="28dp"
-        android:text="Already Signed In? logIn."
-        android:textSize="22dp"
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="350dp"
+        android:layout_height="54dp"
+        android:background="@color/Aquamarine"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/IndianRed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818" />
+        app:layout_constraintVertical_bias="0.29" />
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="352dp"
+        android:layout_height="50dp"
+        android:background="@color/Aquamarine"
+        android:ems="10"
+        android:hint="Email Id"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/IndianRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.406" />
 
     <EditText
         android:id="@+id/etAge"
-        android:layout_width="360dp"
-        android:layout_height="49dp"
+        android:layout_width="354dp"
+        android:layout_height="53dp"
+        android:background="@color/Aquamarine"
         android:ems="10"
         android:hint="Age"
         android:inputType="textPersonName"
+        android:textColorHint="@color/IndianRed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
-
-    <ImageView
-        android:id="@+id/ivpic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/etname"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.651" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

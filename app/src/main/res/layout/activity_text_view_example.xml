@@ -15,6 +15,7 @@
         android:layout_alignParentRight="true"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
+        android:textIsSelectable="true"
         android:layout_marginEnd="91dp"
         android:layout_marginRight="91dp"
         android:gravity="center_horizontal"

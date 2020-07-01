@@ -19,7 +19,9 @@ import com.example.androidtutor.AndroidWidgets.ProgressBarWidget;
 import com.example.androidtutor.AndroidWidgets.RadioButtonWidget;
 import com.example.androidtutor.AndroidWidgets.RatingBarWidget;
 import com.example.androidtutor.AndroidWidgets.SeekBarWidget;
+import com.example.androidtutor.AndroidWidgets.Switch.SwitchWidget;
 import com.example.androidtutor.AndroidWidgets.TextViewFragment;
+import com.example.androidtutor.AndroidWidgets.ToggleButton.ToggleButtonWidget;
 import com.example.androidtutor.R;
 
 
@@ -121,6 +123,21 @@ private Button imageButton,imageView,videoView;
                 startActivity(new Intent(getContext(), SeekBarWidget.class));
             }
         });
+        switch_.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), SwitchWidget.class));
+            }
+        });
+
+        togglebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ToggleButtonWidget.class));
+            }
+        });
+
+
 
 
         return v;

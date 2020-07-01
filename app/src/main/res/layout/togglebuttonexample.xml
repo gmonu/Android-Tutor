@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ToggleButton
+        android:id="@+id/ToggleButtonDemo"
+        android:layout_width="332dp"
+        android:textSize="25sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="200dp"
+        android:checked="false"
+        android:drawablePadding="20dp"
+        android:textColor="#000" />
+
+</LinearLayout>

@@ -630,4 +630,60 @@ public class MainActivity extends AppCompatActivity {\n
         \tandroid:textOn="On" />\n
 &lt;/LinearLayout>\n
     </string>
+
+    <string name="togglebuttonjava">
+import android.support.v7.app.AppCompatActivity;\n
+import android.os.Bundle;\n
+import android.view.View;\n
+import android.widget.Toast;\n
+import android.widget.ToggleButton;\n
+\n
+\n
+\tpublic class MainActivity extends AppCompatActivity {\n
+  \t\t\n      ToggleButton ToggleButtonDemo;\n
+\t\n\n
+  \t          \t\t        @Override\n
+        \n\t\t    \t        protected void onCreate(Bundle savedInstanceState) {\n
+                    \t\t\t\t            super.onCreate(savedInstanceState);\n
+                    \t\t\t\t            setContentView(R.layout.activity_toggle_button);\n
+                     \t\t\t\t           ToggleButtonDemo = (ToggleButton) findViewById(R.id.ToggleButtonDemo);\n
+                        \t\t\t\t        ToggleButtonDemo.setOnClickListener(new View.OnClickListener() {\n
+                                \t\t\t\t         \t       @Override\n
+                                       \t\t\t\t\t         public void onClick(View view) {\n
+                                              \t\t\t\t\t      if(ToggleButtonDemo.isChecked()){\n
+                                                       \t\t\t\t\t Toast.makeText(getApplicationContext(),"ToggleButton:-"\n+ToggleButtonDemo.getText().toString(), Toast.LENGTH_SHORT).show();\n
+                                                   \t\t\t\t\t }\n
+                                                 \t\t\t\t\t   else {\n
+                                                     \t\t\t\t\t   Toast.makeText(getApplicationContext(),"ToggleButton:-"\n+ToggleButtonDemo.getText().toString(), Toast.LENGTH_LONG).show();\n
+                                                   \t\t\t\t\t }\n
+\n\n
+  \n\t\t\t                                              }\n
+          \t\t\t                          });\n
+               \t\t     }\n
+       \t \n
+\t}
+    </string>
+    <string name="togglebuttonxml">
+        &lt;?xml version="1.0" encoding="utf-8"?>
+        &lt;LinearLayout\n
+\t\n
+\t          xmlns:android="http://schemas.android.com/apk/res/android"\n
+            \tandroid:layout_width="match_parent"\n
+            \tandroid:layout_height="match_parent"\n
+            \tandroid:orientation="vertical">\n
+\n
+\n
+    &lt;ToggleButton\n
+       \t android:id="@+id/ToggleButtonDemo"\n
+       \t android:layout_width="332dp"\n
+       \t android:textSize="25sp"\n
+       \t android:layout_height="wrap_content"\n
+       \t android:layout_gravity="center_horizontal"\n
+       \t android:layout_margin="200dp"\n
+       \t android:checked="false"\n
+        \tandroid:drawablePadding="20dp"\n
+       \t android:textColor="#000" />\n
+\n
+&lt;/LinearLayout>
+    </string>
 </resources>

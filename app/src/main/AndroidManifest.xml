@@ -67,6 +67,7 @@
             </intent-filter>
         </activity>
 <activity android:name=".AndroidWidgets.Switch.SwitchWidget"></activity>
+        <activity android:name=".AndroidWidgets.ToggleButton.ToggleButtonWidget"></activity>
     </application>
 
 

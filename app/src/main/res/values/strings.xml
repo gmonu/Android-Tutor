@@ -11,7 +11,7 @@
     <string name="share">share</string>
     <string name="todo1">TODO</string>
     <string name="logout">Logout</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--    Android Widgets Strings-->
@@ -562,5 +562,72 @@ public class MainActivity extends AppCompatActivity {\n
         \t/>\n
 &lt;/LinearLayout>\n
 
+    </string>
+
+    <string name="switchjava"
+        >
+
+        import android.support.v7.app.AppCompatActivity;\n
+import android.graphics.Color;\n
+import android.os.Bundle;\n
+import android.widget.LinearLayout;\n
+import android.widget.Switch;\n
+import android.widget.Toast;\n
+\n
+\n
+public class MainActivity extends AppCompatActivity {\n
+    \tSwitch SwitchDemo;\n
+    \tLinearLayout switchLayout;\n
+\n
+	\t			@Override\n
+	\t\t			protected void onCreate(Bundle savedInstanceState) {\n
+	\t\t							super.onCreate(savedInstanceState);\n
+		\t\t						setContentView(R.layout.activity_main);\n
+			\t\t					switchLayout=(LinearLayout)findViewById(R.id.switchlayout);\n
+			\t\t					SwitchDemo = (Switch) findViewById(R.id.SwitchDemo);\n
+			\t\t					\n
+			\t\t							SwitchDemo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {\n
+			\t\t\t\t										public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {\n
+		\t\t\t\t\t\t														if(SwitchDemo.isChecked())\n
+					\t\t\t\t											{\n
+							\t\t\t\t\t\t										switchLayout.setBackgroundColor(Color.YELLOW);\n
+										\t\t\t\t\t\t							Toast.makeText(getApplicationContext(), "SwitchState :" + SwitchDemo.getTextOn().toString(), Toast.LENGTH_LONG).show();\n
+													\t\t\t\t\t\t			}\n
+													\t\t\t\t\t\t			else {\n
+												\t\t\t\t\t\t					switchLayout.setBackgroundColor(Color.RED);\n
+													\t\t\t\t\t\t				Toast.makeText(getApplicationContext(), "SwitchState :" + SwitchDemo.getTextOff().toString(), Toast.LENGTH_LONG).show();\n
+													\t\t\t\t			}\n
+												\t\t\t\t	}\n
+										\t\t});\n\n
+\t
+\n
+\t				}\n
+  \t \n
+}\n
+
+
+    </string>
+
+    <string name="Switchxml">
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;LinearLayout\n
+        \t    xmlns:android="http://schemas.android.com/apk/res/android"\n
+          \t  android:layout_width="match_parent"\n
+          \t  android:layout_height="match_parent"\n
+           \t android:id="@+id/switchlayout"\n
+           \t android:orientation="vertical">\n
+\n
+    &lt;Switch\n
+       \t android:id="@+id/SwitchDemo"\n
+        \tandroid:layout_width="wrap_content"\n
+        \tandroid:layout_height="wrap_content"\n
+        \tandroid:layout_margin="30dp"\n
+        \tandroid:layout_gravity="center"\n
+        \tandroid:checked="false"\n
+        \tandroid:textSize="30dp"\n
+        \tandroid:text="Switch"\n
+        \tandroid:textOff="Off"\n
+        \tandroid:textOn="On" />\n
+&lt;/LinearLayout>\n
     </string>
 </resources>

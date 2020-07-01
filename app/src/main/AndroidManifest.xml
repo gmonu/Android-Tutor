@@ -66,8 +66,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+<activity android:name=".AndroidWidgets.Switch.SwitchWidget"></activity>
     </application>
+
 
     <uses-permission android:name="android.permission.INTERNET" />
 

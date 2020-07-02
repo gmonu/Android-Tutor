@@ -16,25 +16,25 @@
 
     <!--    Android Widgets Strings-->
     <string name="textviewxml">
-        &lt;?xml version="1.0" encoding="utf-8"?>\n
-        &lt;LinearLayout\n
-            \t\txmlns:android="http://schemas.android.com/apk/res/android"\n
-            \t\txmlns:app="http://schemas.android.com/apk/res-auto"\n
-            \t\txmlns:tools="http://schemas.android.com/tools"\n
-            \t\tandroid:layout_width="match_parent"\n
-            \t\tandroid:layout_height="match_parent">\n\n
+        &lt;?xml version="1.0" encoding="utf-8"?>
+        &lt;LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    &lt;TextView\n
-        \t\tandroid:id="@+id/textView22"\n
-        \t\tandroid:layout_width="match_parent"\n
-        \t\tandroid:layout_height="wrap_content"\n
-        \t\tandroid:text="@string/textviewxml"\n
-        \t\tandroid:textIsSelectable="true"\n
-        \t\tandroid:textColor="@color/black"\n
-        \t\tandroid:textSize="16sp"\n
-        \t\tandroid:layout_margin="10dp"\n
-        \t\tandroid:padding="10dp"\n
-        \t/>\n\n
+    &lt;TextView
+        android:id="@+id/textView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewxml"
+        android:textIsSelectable="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        />
 &lt;/LinearLayout>
 
     </string>
@@ -54,19 +54,22 @@
     \t}\n
 
     </string>
-    <string name="imagebuttonxml">
-        &lt;?xml version="1.0" encoding="utf-8"?>\n
-        \t      &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android " \n
-        \t          android:orientation="vertical" android:layout_width="match_parent"\n
-        \t          android:layout_height="match_parent">\n
-\t&lt;ImageButton\n
-    \t\t    android:layout_width="170dp"\n
-    \t\t    android:layout_height="170dp"\n
-    \t\t    android:src="@drawable/ic_photography"\n
-    \t\t    android:layout_gravity="center"\n
-    \t\t    android:layout_marginTop="50dp"\n
-    \t\t    android:id="@+id/imgbt"/>\n
+    <string name="imagebuttonxml">"
+&lt;?xml version=\"1.0\" encoding=\"utf-8\"?>
+&lt;LinearLayout
+        xmlns:android=\"http://schemas.android.com/apk/res/android\"
+        android:orientation=\"vertical\"
+        android:layout_width=\"match_parent\"
+        android:layout_height=\"match_parent\">
 
+        \t&lt;ImageButton
+            android:layout_width=\"170dp\"
+            android:layout_height=\"170dp\"
+            android:src=\"@drawable/ic_photography\"
+            android:layout_gravity=\"center\"
+            android:layout_marginTop=\"50dp\"
+            android:id=\"@+id/imgbt\"/>
+&lt;/LinearLayout>"
 &lt;/LinearLayout>
     </string>
 
@@ -686,5 +689,31 @@ import android.widget.ToggleButton;\n
 \n
 &lt;/LinearLayout>
     </string>
+    <string name="imagebuttonjava">
+"import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.Toast;
+import androidx.fragment.app.Fragment;
+import com.example.androidtutor.R;
 
+public class ImageButtonExample extends Fragment {
+    private ImageButton imgbt;
+
+    @Override
+    public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v= inflater.inflate(R.layout.fragment_imagebutton_example, container, false);
+        imgbt=v.findViewById(R.id.imgbt);
+        imgbt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(),"ImageButton was Clicked!",Toast.LENGTH_LONG).show();
+            }
+        });
+        return v;
+    }
+}
+"    </string>
 </resources>

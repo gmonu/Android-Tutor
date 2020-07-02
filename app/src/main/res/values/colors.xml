@@ -111,5 +111,5 @@
     <color name="bottomNavItem">#ffffff</color>
     <color name="bottomNavInactive">#80ffffff</color>
     <color name="blackToWhite">#000</color>
-
+    <color name="brown">#545454</color>
 </resources>

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.androidtutor.AndroidImagesAndMedia.ImageButton.ImageButtonWidget;
 import com.example.androidtutor.AndroidImagesAndMedia.ImageView.ImageViewWidget;
+import com.example.androidtutor.AndroidWidgets.AutocompleteTextview.AutocompleteWidget;
 import com.example.androidtutor.AndroidWidgets.ButtonWidget;
 import com.example.androidtutor.AndroidWidgets.CheckBoxWidget;
 import com.example.androidtutor.AndroidWidgets.EditTextWidget;
@@ -142,6 +143,12 @@ private Button imageButton,imageView,videoView;
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), SpinnerWidget.class));
+            }
+        });
+        autocomplete_textview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), AutocompleteWidget.class));
             }
         });
 

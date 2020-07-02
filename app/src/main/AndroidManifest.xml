@@ -69,6 +69,7 @@
 <activity android:name=".AndroidWidgets.Switch.SwitchWidget"></activity>
         <activity android:name=".AndroidWidgets.ToggleButton.ToggleButtonWidget"></activity>
    <activity android:name=".AndroidWidgets.Spinner.SpinnerWidget"></activity>
+        <activity android:name=".AndroidWidgets.AutocompleteTextview.AutocompleteWidget"></activity>
     </application>
 
 

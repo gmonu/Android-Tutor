@@ -69,8 +69,8 @@
             android:layout_gravity=\"center\"
             android:layout_marginTop=\"50dp\"
             android:id=\"@+id/imgbt\"/>
-&lt;/LinearLayout>"
 &lt;/LinearLayout>
+&lt;/LinearLayout>"
     </string>
 
     <string name="buttonjava">
@@ -716,4 +716,120 @@ public class ImageButtonExample extends Fragment {
     }
 }
 "    </string>
+
+    <string name="spinnerjava">"
+import android.support.v7.app.AppCompatActivity;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+         Spinner spinnercity;
+        @Override
+				protected void onCreate(Bundle savedInstanceState) {
+								super.onCreate(savedInstanceState);
+								setContentView(R.layout.spinner_example);
+                                spinnercity = v.findViewById(R.id.spinnercity);
+                                String[] cities = {"New Delhi", "Mumbai", "Patna", "Bangalore", "Ahemdabad"};
+                                ArrayAdapter&lt;String> adapter =  new ArrayAdapter&lt;String>(getActivity(),android.R.layout.simple_spinner_dropdown_item, cities);
+                                spinnercity.setAdapter(adapter);
+                                return v;
+    }
+
+
+}"
+
+
+    </string>
+    <string name="spinnerxml">"
+        &lt;?xml version="1.0" encoding="utf-8"?>
+        &lt;LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+    &lt;Spinner
+        android:id="@+id/spinnercity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp" />
+
+&lt;/LinearLayout>"
+
+    </string>
+
+<string name="autocompletexml">
+"   &lt;?xml version="1.0" encoding="utf-8"?>
+    &lt;LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    &lt;AutoCompleteTextView
+        android:id="@+id/AutoCompleteTextViewDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Enter Name"
+        android:padding="15dp"
+        android:textColor="@color/black" />
+
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/txtautotext"
+        />
+
+&lt;/LinearLayout>"
+</string>
+
+    <string name="autocompletejava">"
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+public class MainActivity extends AppCompatActivity {
+    AutoCompleteTextView AutoCompleteTextViewDemo;
+    TextView txtautotext;
+    String[] nameList = {"Abhishek","Anand","Aarav","Avni","Bindiya","Bunny","Bumi","Chandni","Chatur","Charu","Divyansh","Dhruva",
+            "Milan","Monu","Mohit","Payal","Priti","Prachi","Kajal","Karandeep","Kriva","Kishan","Kaushik","Hetal","Hina","Rahul","Rutvi",
+            "Rutvik","Sneha","Shreya","Sarika","Zuha"};
+
+                            @Override
+                            protected void onCreate(Bundle savedInstanceState) {
+                                super.onCreate(savedInstanceState);
+                                setContentView(R.layout.activity_main);
+                                AutoCompleteTextViewDemo = (AutoCompleteTextView) findViewById(R.id.AutoCompleteTextViewDemo);
+                                txtautotext=(TextView)findViewById(R.id.txtautotext);
+                                StringBuilder editText = new StringBuilder();
+                                editText.append("Input Value:").append("\n");
+
+                                for(String value: nameList) {
+                                    editText.append(value).append(", ");
+                                }
+                                txtautotext.setText(editText);
+                                ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, nameList);
+                                AutoCompleteTextViewDemo.setAdapter(adapter);
+                                AutoCompleteTextViewDemo.setThreshold(1);//start searching from 1 character
+                                AutoCompleteTextViewDemo.setAdapter(adapter);
+                            }
+
+}"
+    </string>
+
 </resources>

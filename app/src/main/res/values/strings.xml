@@ -813,7 +813,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             protected void onCreate(Bundle savedInstanceState) {
                                 super.onCreate(savedInstanceState);
-                                setContentView(R.layout.activity_main);
+                                setContentView(R.layout.autocompleteexample);
                                 AutoCompleteTextViewDemo = (AutoCompleteTextView) findViewById(R.id.AutoCompleteTextViewDemo);
                                 txtautotext=(TextView)findViewById(R.id.txtautotext);
                                 StringBuilder editText = new StringBuilder();
@@ -831,5 +831,124 @@ public class MainActivity extends AppCompatActivity {
 
 }"
     </string>
+    <string name="multiautocompletejava">
 
+   "
+
+    import android.support.v7.app.AppCompatActivity;
+    import android.os.Bundle;
+    import android.widget.ArrayAdapter;
+    import android.widget.MultiAutoCompleteTextView;
+    import android.widget.TextView;
+    import android.widget.Toast;
+
+
+    public class MainActivity extends AppCompatActivity {
+    MultiAutoCompleteTextView MultiAutoCompleteTextViewDemo;
+    TextView txtmultiautotext;
+    String[] MnameList = {"Abhishek","Anand","Aarav","Avni","Bindiya","Bunny","Bumi","Chandni","Chatur","Charu","Divyansh","Dhruva",
+    "Milan","Monu","Mohit","Payal","Priti","Prachi","Kajal","Karandeep","Kriva","Kishan","Kaushik","Hetal","Hina","Rahul","Rutvi",
+    "Rutvik","Sneha","Shreya","Sarika","Zuha"};
+
+            @Override
+            protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.multiautocompleteexample);
+            MultiAutoCompleteTextViewDemo=(MultiAutoCompleteTextView)findViewById(R.id.MultiAutoCompleteTextViewDemo);
+            txtmultiautotext=(TextView)findViewById(R.id.txtmultiautotext);
+            StringBuilder MeditText = new StringBuilder();
+            MeditText.append("Input Value:").append("\n");
+
+            for(String value: MnameList) {
+            MeditText.append(value).append(", ");
+            }
+            txtmultiautotext.setText(MeditText);
+            ArrayAdapter multiadpter= new ArrayAdapter(this, android.R.layout.simple_list_item_1, MnameList);
+            MultiAutoCompleteTextViewDemo.setAdapter(multiadpter);
+
+
+            MultiAutoCompleteTextViewDemo.setThreshold(1);
+
+            MultiAutoCompleteTextViewDemo.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+    }
+
+    }
+" </string>
+
+    <string name="multiautocompletexml">"
+        &lt;?xml version="1.0" encoding="utf-8"?>
+        &lt;LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    &lt;MultiAutoCompleteTextView
+        android:id="@+id/MultiAutoCompleteTextViewDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/txtmultiautotext"
+        />
+
+&lt;/LinearLayout>"
+    </string>
+
+    <string name="checkedtextviewxml">"
+        &lt;?xml version="1.0" encoding="utf-8"?>
+        &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+    &lt;CheckedTextView
+        android:id = "@+id/text"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "Checked Text View"
+        android:textSize = "25sp"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintLeft_toLeftOf = "parent"
+        app:layout_constraintRight_toRightOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent" />
+
+&lt;/LinearLayout>"
+    </string>
+
+    <string name="checktextviewjava">"
+package com.example.androidtutor.AndroidWidgets.CheckTextview;
+
+import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CheckedTextView;
+    public class MainActivity extends AppCompatActivity {
+        CheckedTextView text;
+            @Override
+            protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.checktextviewxml);
+                  text = (CheckedTextView)findViewById(R.id.text);
+                   text.setCheckMarkDrawable(null);
+                    text.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            text.setCheckMarkDrawable(R.drawable.check);
+                        }
+                    });
+            }
+        }
+        "
+    </string>
 </resources>

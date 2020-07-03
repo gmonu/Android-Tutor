@@ -15,7 +15,9 @@ import com.example.androidtutor.AndroidImagesAndMedia.ImageView.ImageViewWidget;
 import com.example.androidtutor.AndroidWidgets.AutocompleteTextview.AutocompleteWidget;
 import com.example.androidtutor.AndroidWidgets.ButtonWidget;
 import com.example.androidtutor.AndroidWidgets.CheckBoxWidget;
+import com.example.androidtutor.AndroidWidgets.CheckTextview.ChecktextviewWidget;
 import com.example.androidtutor.AndroidWidgets.EditTextWidget;
+import com.example.androidtutor.AndroidWidgets.MutilautocompleteTextview.MutoautocompleteWidget;
 import com.example.androidtutor.AndroidWidgets.ProgressBarWidget;
 import com.example.androidtutor.AndroidWidgets.RadioButtonWidget;
 import com.example.androidtutor.AndroidWidgets.RatingBarWidget;
@@ -152,7 +154,19 @@ private Button imageButton,imageView,videoView;
             }
         });
 
+        multiautocomplete_textview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), MutoautocompleteWidget.class));
+            }
+        });
 
+        checkedtextview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ChecktextviewWidget.class));
+            }
+        });
 
 
 

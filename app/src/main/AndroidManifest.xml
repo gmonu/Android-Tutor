@@ -70,6 +70,8 @@
         <activity android:name=".AndroidWidgets.ToggleButton.ToggleButtonWidget"></activity>
    <activity android:name=".AndroidWidgets.Spinner.SpinnerWidget"></activity>
         <activity android:name=".AndroidWidgets.AutocompleteTextview.AutocompleteWidget"></activity>
+        <activity android:name=".AndroidWidgets.MutilautocompleteTextview.MutoautocompleteWidget"></activity>
+        <activity android:name=".AndroidWidgets.CheckTextview.ChecktextviewWidget"></activity>
     </application>
 
 
